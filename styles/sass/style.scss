@@ -1,5 +1,8 @@
 @import 'setup';
+@import 'global';
+@import 'variables';
+@import 'typography';
+@import 'navigation';
+@import 'buttons';
+@import 'contact-us';
 
-h1 {
-    color: red;
-}

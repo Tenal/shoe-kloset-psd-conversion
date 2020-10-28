@@ -5,8 +5,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
     <link rel="stylesheet" href="./styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Pompiere&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/08b596cacd.js" crossorigin="anonymous"></script>
+
 </head>
+
+
+<!-- NOTE: haven't added the <aside> section yet or separated all other sections into a right-div -->
+    <!-- NOTE: change second div to an aside??? -->
+
+
 <body>
-    
+    <!-- HEADER STARTS HERE -->
+    <header>
+        <div class="wrapper">
+            <div class="logo-and-nav-container">
+                <p class="logo">Shoe Kloset</p>
+                <nav>
+                    <label for="ham-menu">
+                        <i class="fa fa-bars"></i>
+                        <span class="sr-only">Menu icon</span>
+                    </label>
+                    <input type="checkbox" id="ham-menu" name="ham-menu">
+                    <ul class="header-menu">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#about">About</a>
+                        </li>
+                        <li>
+                            <a href="#blog">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="heading-container">
+                <h1 class="h1-secondary">Blog</h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN STARTS HERE -->
+    <main>
+        <section>
+            <div class="main-container">
+                <img src="./assets/blog-post-image.jpg" alt="">
+                <h2 class="h2-main">Shoes Around The World</h2>
+                <p>Monday May 4th, 2019 by Dieula</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit pariatur perspiciatis, culpa fugiat atque minus blanditiis illo, officia tempore amet illum nesciunt quasi et necessitatibus libero voluptatibus fugit soluta reprehenderit rerum quae quam ipsum aspernatur, molestias consectetur! Soluta at atque provident esse tenetur dolore vel necessitatibus commodi fuga nobis, voluptate rem. Minima ducimus doloremque dolorem eaque animi numquam repudiandae vel fugiat eius culpa non sed cupiditate laboriosam adipisci voluptatibus reiciendis, nesciunt iusto officiis modi est earum veritatis dolore laudantium? Deleniti ea dolor delectus saepe recusandae.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia deleniti ipsum illo quasi facilis, labore neque voluptates odit odio nesciunt sequi repellendus culpa officiis aspernatur, accusamus, unde aliquid necessitatibus? Assumenda rem sunt eius iure. Quia praesentium ex delectus tenetur quibusdam voluptatem blanditiis facere cum pariatur doloribus, architecto omnis recusandae beatae nulla similique commodi incidunt maiores velit ad culpa dolore minus debitis inventore? Perspiciatis modi neque eum mollitia porro exercitationem voluptas fugit quidem commodi quasi. Rem illum dolore tempore adipisci non voluptatum et possimus, debitis deleniti suscipit placeat dolorum odit delectus ullam corrupti dolor ut labore obcaecati autem laboriosam? Libero illum nobis quasi ratione ipsam, esse quisquam mollitia quas! Ratione voluptatibus dignissimos natus magni atque error ipsum dicta voluptatum quidem soluta.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A voluptas voluptatibus asperiores adipisci amet exercitationem non unde dolor iste. Corrupti quos voluptatem voluptates delectus vero error, dignissimos a, magni dicta iusto itaque consectetur reprehenderit mollitia eos exercitationem? Excepturi voluptate quia quod tenetur incidunt molestias facere dolorum distinctio vero, itaque repellat sequi consectetur repellendus similique adipisci magni sit non perferendis, ducimus qui fugiat. Ipsam officiis error perspiciatis, at mollitia amet ea.</p>
+            </div>
+            <div class="aside-container">
+                <img src="./assets/sidebar-image.jpg" alt="someone's feet with nike runners on jumping in water">
+                <h3>Any Weather</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia veritatis, autem nostrum illum maiores atque.</p>
+                <h3>Recent Posts</h3>
+                <ul>
+                    <li>Lorem ipsum dolor sit.</li>
+                    <li>Lorem ipsum dolor sit.</li>
+                    <li>Lorem ipsum dolor sit.</li>
+                    <li>Lorem ipsum dolor sit.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <div class="wrapper">
+                <!-- comments start here -->
+                <div class="comments-container">
+                    <h2 class="h2-main">Comments:</h2>
+                    <div class="comment-1">
+                        <div class="image-container">
+                            <img src="./assets/comment-1.jpg" alt="a headshot of a young man smiling">
+                        </div>
+                        <div class="text-container">
+                            <p>Tuesday November 21st, 2019 by Jeremy</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto error ipsam quos ipsa ducimus ad aperiam sint repellendus dolores possimus.</p>
+                        </div>
+                    </div>
+                    <div class="comment-2">
+                        <div class="image-container">
+                            <img src="./assets/comment-2.jpg" alt="a headshot of a young woman smiling">
+                        </div>
+                        <div class="text-container">
+                            <p>Wednesday November 10th, 2019 by Julia</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto error ipsam quos ipsa ducimus ad aperiam sint repellendus dolores possimus.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- form starts here -->
+                <div class="form-container">
+                    <form action="#" method="post" class="contact-us-form">
+                        <div class="name-and-email">
+                            <div class="name-box">
+                                <label for="name" class="sr-only">Name</label>
+                                <input type="text" name="name" id="name" placeholder="Name" required>
+                            </div>
+                            <div class=email-box>
+                                <label for="email" class="sr-only">Email Address</label>
+                                <input name="email" type="email" id="email" placeholder="Email" required>
+                            </div>
+                        </div>
+                        <div class=message-box>
+                            <label for="message" class="sr-only">Message</label>
+                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Comment" required></textarea>
+                        </div>
+                        <button type="submit">Post Comment</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER STARTS HERE -->
+    <footer>
+        <p>Made by Tenal at <a href="https://junocollege.com/">Juno College</a> (&#169; 2019)</p>
+    </footer>
 </body>
 </html>

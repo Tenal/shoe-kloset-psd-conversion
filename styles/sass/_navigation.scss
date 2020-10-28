@@ -1,0 +1,27 @@
+// desktop nav menu
+.header-menu {
+    display: flex;
+}
+
+.header-menu li {
+    margin-right: 30px;
+}
+
+.header-menu li:last-of-type {
+    margin-right: 0;
+}
+
+.header-menu a {
+    padding: 5px 15px;
+}
+
+.header-menu a:hover {
+    color: $white;
+    background-color: $plum;
+}
+
+// mobile hamburger menu
+label, 
+input[type=checkbox] {
+    display: none;
+}

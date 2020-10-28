@@ -1,0 +1,41 @@
+
+//REVIEW: change max wrapper width in px? research online
+
+// global styles
+*,
+p, 
+h1,
+h2, 
+h3,
+a,
+button {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+	max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.wrapper {
+    max-width: 1280px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+

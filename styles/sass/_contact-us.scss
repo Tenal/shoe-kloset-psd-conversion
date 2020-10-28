@@ -1,0 +1,93 @@
+header {
+    background-image: url(.../assets\contact-image.jpg);
+    height: 75vh;
+    padding-top: 30px;
+    border: 1px solid red;
+}
+
+.logo-and-nav-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 100px;
+}
+
+
+.main-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.address-container {
+    width: 40%;
+    border: 1px solid black;
+}
+
+.form-container {
+    width: 60%;
+}
+
+// form styling
+.contact-us-form {
+    width: auto;
+    // padding: 60px 0;
+    margin: 0 auto;
+    // text-align: center;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid blue;
+    box-shadow: -25px 25px $orange;
+}
+
+.name-and-email {
+    // margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.name-box, 
+.email-box {
+    width: calc(100% / 2 - 20px);
+    margin: 10px;
+}
+
+.contact-us-form input {
+    width: 100%;
+}
+
+.contact-us-form textarea {
+    width: calc(100% - 20px);
+    resize: none;
+    margin: 10px;
+}
+
+.contact-us-form button {
+    margin: 10px;
+    align-self: center;
+}
+
+/* text formatting within form */
+
+input, 
+textarea {
+    padding: 12px 15px;
+    background-color: $white;
+    border: none;
+}
+
+input {
+    border-bottom: 2px solid $orange;
+}
+
+textarea {
+    border: 2px solid $orange;
+}
+
+input[type=text]::placeholder,
+input[type=email]::placeholder,
+textarea::placeholder {
+    opacity: 1;
+}
+

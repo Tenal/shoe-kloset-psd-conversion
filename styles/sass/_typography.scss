@@ -1,0 +1,85 @@
+
+// REVIEW: change the blue to H3???
+// NOTE: remove class on h2-main and just use indenting
+// NOTE: condense to a single mixin, maybe?
+
+// mixin declarations
+@mixin heading-font($font-size) {
+    font-size: ($font-size/10) * 1rem;
+    font-weight: 400;
+    font-family: 'Pompiere', cursive;
+    text-transform: uppercase;
+}
+
+@mixin body-font($font-size: 20, $font-weight: 400) {
+    font-size: ($font-size/10) * 1rem;
+    font-weight: $font-weight;
+    font-family: 'Lato', sans-serif;
+}
+
+// body, nav, button, and logo styling
+body,
+input {
+    @include body-font(20);
+}
+
+nav a {
+    @include body-font(20, 700);
+    text-transform: uppercase;
+    line-height: 2.9rem;
+    letter-spacing: 0.1rem;
+}
+
+button,
+.button {
+    @include body-font(20);
+    line-height: 3.2rem;
+    letter-spacing: 0.1rem;
+}
+
+footer {
+    @include body-font(20);
+    line-height: 3.2rem;
+}
+
+// heading styling
+.logo {
+    @include heading-font(35.8);
+    text-transform: initial;
+    line-height: 3.6rem;
+    letter-spacing: 0.11rem;
+}
+
+.h1-main {
+    @include heading-font(110);
+    text-transform: initial;
+    line-height: 6.4rem;
+}
+
+.h1-secondary {
+    @include heading-font(80);
+    line-height: 9.2rem;
+    color: $plum;
+}
+
+h2 {
+    @include heading-font(52);
+}
+
+.h2-main {
+    letter-spacing: 0.12rem;
+}
+
+.icons-section h2 {
+    letter-spacing: 0.16rem;
+}
+
+.new-additions-section h3 {
+    @include heading-font(42);
+    letter-spacing: 0.13rem;
+}
+
+.aside-container h3 {
+    @include heading-font(30);
+    letter-spacing: 0.13rem;
+}
