@@ -1,0 +1,21 @@
+// colours
+$plum: #4C0341;
+$orange: #FE6F19;
+$white: #FFFFFF;
+$black: #0D0D0D;
+$brown: #882C07;
+$mauve: #FAE5FF;
+
+// mixin declarations
+@mixin heading-font($font-size) {
+    font-size: ($font-size/10) * 1rem;
+    font-weight: 400;
+    font-family: 'Pompiere', cursive;
+    text-transform: uppercase;
+}
+
+@mixin body-font($font-size: 20, $font-weight: 400) {
+    font-size: ($font-size/10) * 1rem;
+    font-weight: $font-weight;
+    font-family: 'Lato', sans-serif;
+}

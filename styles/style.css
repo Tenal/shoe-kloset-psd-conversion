@@ -276,6 +276,7 @@ input {
   font-size: 2rem;
   font-weight: 400;
   font-family: 'Lato', sans-serif;
+  line-height: 29px;
 }
 
 nav a {
@@ -283,8 +284,8 @@ nav a {
   font-weight: 700;
   font-family: 'Lato', sans-serif;
   text-transform: uppercase;
-  line-height: 2.9rem;
-  letter-spacing: 0.1rem;
+  line-height: 29px;
+  letter-spacing: 1px;
 }
 
 button,
@@ -292,8 +293,18 @@ button,
   font-size: 2rem;
   font-weight: 400;
   font-family: 'Lato', sans-serif;
-  line-height: 3.2rem;
-  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  line-height: 32px;
+  letter-spacing: 1px;
+  color: #FFFFFF;
+}
+
+.address-container div p:first-child {
+  font-size: 3rem;
+  font-weight: 400;
+  font-family: 'Pompiere', cursive;
+  text-transform: uppercase;
+  color: #4C0341;
 }
 
 footer {
@@ -301,6 +312,7 @@ footer {
   font-weight: 400;
   font-family: 'Lato', sans-serif;
   line-height: 3.2rem;
+  color: #FFFFFF;
 }
 
 .logo {
@@ -309,8 +321,8 @@ footer {
   font-family: 'Pompiere', cursive;
   text-transform: uppercase;
   text-transform: initial;
-  line-height: 3.6rem;
-  letter-spacing: 0.11rem;
+  line-height: 36px;
+  letter-spacing: 1.1px;
 }
 
 .h1-main {
@@ -319,7 +331,8 @@ footer {
   font-family: 'Pompiere', cursive;
   text-transform: uppercase;
   text-transform: initial;
-  line-height: 6.4rem;
+  line-height: 64px;
+  color: #4C0341;
 }
 
 .h1-secondary {
@@ -327,7 +340,7 @@ footer {
   font-weight: 400;
   font-family: 'Pompiere', cursive;
   text-transform: uppercase;
-  line-height: 9.2rem;
+  line-height: 92px;
   color: #4C0341;
 }
 
@@ -339,11 +352,11 @@ h2 {
 }
 
 .h2-main {
-  letter-spacing: 0.12rem;
+  letter-spacing: 1.2px;
 }
 
 .icons-section h2 {
-  letter-spacing: 0.16rem;
+  letter-spacing: 1.6px;
 }
 
 .new-additions-section h3 {
@@ -351,7 +364,7 @@ h2 {
   font-weight: 400;
   font-family: 'Pompiere', cursive;
   text-transform: uppercase;
-  letter-spacing: 0.13rem;
+  letter-spacing: 1.3px;
 }
 
 .aside-container h3 {
@@ -359,7 +372,7 @@ h2 {
   font-weight: 400;
   font-family: 'Pompiere', cursive;
   text-transform: uppercase;
-  letter-spacing: 0.13rem;
+  letter-spacing: 1.3px;
 }
 
 .header-menu {
@@ -372,17 +385,17 @@ h2 {
   margin-right: 30px;
 }
 
-.header-menu li:last-of-type {
-  margin-right: 0;
-}
-
-.header-menu a {
+.header-menu li a {
   padding: 5px 15px;
 }
 
-.header-menu a:hover {
+.header-menu li a:hover {
   color: #FFFFFF;
   background-color: #4C0341;
+}
+
+.header-menu li:last-of-type {
+  margin-right: 0;
 }
 
 label,
@@ -390,16 +403,71 @@ input[type=checkbox] {
   display: none;
 }
 
-/* purple 'button' styling (anchor tags styled like buttons) */
-/* brown 'button' styling (anchor tags styled like buttons) */
+header {
+  border: 1px solid red;
+}
+
+.h1-main {
+  width: 350px;
+}
+
+.popular-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 60px 0;
+}
+
+.popular-section .image-container {
+  width: calc(30% - 80px);
+  margin-right: 80px;
+}
+
+.popular-section .image-container img {
+  -webkit-box-shadow: 30px 30px #FE6F19;
+          box-shadow: 30px 30px #FE6F19;
+}
+
+.popular-section .text-container {
+  width: calc(70% - 80px);
+  border: 1px solid red;
+}
+
+.popular-section .text-container p {
+  margin: 30px 0;
+}
+
+.popular-section .text-container .button {
+  background-color: #882C07;
+  padding: 8px 18px;
+}
+
+.gallery-section {
+  background-color: #FAE5FF;
+  padding: 60px 0;
+}
+
+.gallery-section ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.gallery-section ul li {
+  width: calc(100 / 3 - 60px);
+}
+
+.gallery-section ul li:nth-child(2) {
+  margin: 0 30px 0 30px;
+}
+
 header {
   background-image: url(.../assets\contact-image.jpg);
   height: 75vh;
   padding-top: 30px;
-  border: 1px solid red;
 }
 
-.logo-and-nav-container {
+header .logo-and-nav-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -408,8 +476,17 @@ header {
           justify-content: space-between;
 }
 
-.logo {
+header .logo-and-nav-container .logo {
   width: 100px;
+}
+
+.h1-contact {
+  margin-left: 33%;
+  margin-top: 6%;
+}
+
+.main-contact {
+  background-color: #FAE5FF;
 }
 
 .main-section {
@@ -421,17 +498,45 @@ header {
           justify-content: space-between;
 }
 
-.address-container {
-  width: 40%;
-  border: 1px solid black;
+.main-section .address-container {
+  width: 30%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
-.form-container {
-  width: 60%;
+.main-section .address-container div p:first-child {
+  margin: 20px 0;
 }
 
-.contact-us-form {
-  width: auto;
+.main-section .form-container {
+  width: 70%;
+  position: relative;
+  bottom: 200px;
+  left: 30px;
+}
+
+.social-icons ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #4C0341;
+}
+
+.social-icons ul li {
+  font-size: 2.3rem;
+  margin-right: 20px;
+}
+
+.social-icons a {
+  padding: 5px 5px 5px 0;
+}
+
+.social-icons a:hover {
+  color: #FE6F19;
+}
+
+form {
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -440,12 +545,12 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border: 1px solid blue;
-  -webkit-box-shadow: -25px 25px #FE6F19;
-          box-shadow: -25px 25px #FE6F19;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: -30px 30px #FE6F19;
+          box-shadow: -30px 30px #FE6F19;
 }
 
-.name-and-email {
+form .name-and-email {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -454,33 +559,40 @@ header {
           justify-content: center;
 }
 
-.name-box,
-.email-box {
-  width: calc(100% / 2 - 20px);
-  margin: 10px;
+form .name-box,
+form .email-box {
+  width: calc(100% / 2 - 30px);
+  margin: 60px 15px 0 15px;
 }
 
-.contact-us-form input {
-  width: 100%;
+form .name-box {
+  margin-left: 40px;
 }
 
-.contact-us-form textarea {
-  width: calc(100% - 20px);
+form .email-box {
+  margin-right: 40px;
+}
+
+form .message-box textarea {
+  width: calc(100% - 80px);
   resize: none;
-  margin: 10px;
+  margin: 40px;
 }
 
-.contact-us-form button {
-  margin: 10px;
+form button {
+  margin-bottom: 40px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
 }
 
-/* text formatting within form */
+.name-and-email input {
+  width: 100%;
+}
+
 input,
 textarea {
-  padding: 12px 15px;
+  padding: 20px 20px 12px 20px;
   background-color: #FFFFFF;
   border: none;
 }
@@ -489,8 +601,16 @@ input {
   border-bottom: 2px solid #FE6F19;
 }
 
+input:focus {
+  border-bottom: 2px solid #882C07;
+}
+
 textarea {
   border: 2px solid #FE6F19;
+}
+
+textarea:focus {
+  border: 2px solid #882C07;
 }
 
 input[type=text]::-webkit-input-placeholder,
@@ -515,4 +635,24 @@ input[type=text]::placeholder,
 input[type=email]::placeholder,
 textarea::placeholder {
   opacity: 1;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background-color: #882C07;
+  padding: 5px 0;
+  margin: 0 40px;
+  width: calc(100% - 80px);
+}
+
+button:hover,
+button:focus,
+button:active {
+  background-color: #4C0341;
+}
+
+footer {
+  background-color: #882C07;
+  text-align: center;
 }
