@@ -35,14 +35,48 @@
 
 
 // NEW ADDITIONS SECTION
-.new-additions-section {
-    position: relative;
-    padding: 60px 0;
-    .image-container {
-        width: calc(100% / 2 - 100px);
-    }
+.top-container {
+    display: flex;
+    justify-content: space-between;
+        .image-container {
+            margin-bottom: 40px;
+                img {
+                    box-shadow: 30px 30px $orange;
+                    position: relative;
+                    bottom: 30px;
+                    right: 70px;
+                }
+        }
+        .text-container {
+            padding-left: 70px;
+        }
+}
+
+.bottom-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    text-align: right;
+        .image-container {
+            // margin-left: 40px;
+                img {
+                    box-shadow: -30px 30px $orange;
+                    position: relative;
+                    top: 30px;
+                    left: 70px;
+                }
+        }
+        .text-container {
+            padding-right: 70px;
+        }
+}
+
+.top-container,
+.bottom-container {
     .text-container {
-        width: calc(100% / 2 - 100px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
             p {
                 margin: 30px 0;
             }
@@ -56,41 +90,18 @@
                 background-color: $orange;
             }
     }
-}
-
-.top-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    .image-container {
-        position: absolute;
-        top: -30px;
-        left: 0;
-            img {
-                box-shadow: 30px 30px $orange;
-            }
-    }
+    .image-container, 
     .text-container {
-        margin-bottom: 50px;
+        width: calc(100% / 2);
     }
 }
 
-.bottom-container {
-    display: flex;
-    .image-container {
-        margin-left: 100px;
-        position: absolute;
-        bottom: -30px;
-        right: 0;
-            img {
-                box-shadow: -30px 30px $orange;
-            }
-    }
-    .text-container {
-        margin-top: 50px;
-        text-align: right;
-    }
-}
+
+
+
+
+
+
 
 
 
@@ -109,6 +120,11 @@
                 width: 50%;
                 padding: 0 20px 60px 0;
             }
+    }
+    .image-container {
+        img {
+            width: 100%;
+        }
     }
 }
 
@@ -132,6 +148,7 @@
         background-color: $orange;
     }
 }
+
 
 
 

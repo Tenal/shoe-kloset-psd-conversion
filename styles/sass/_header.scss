@@ -47,9 +47,8 @@ input[type=checkbox] {
     header {
         background-image: url(../assets/header-image.jpg);
         background-position: 45% 0%;
-        background-size: 1550px;
+        background-size: 1600px auto;
         height: 80vh;
-        border: 1px solid red;
         position: relative;
             h1 {
                 margin-top: 100px;
@@ -59,7 +58,7 @@ input[type=checkbox] {
                 position: absolute;
                 right: 0;
                 top: 15vh;
-                width: 50vw;
+                width: 47vw;
             }
     }
 }
@@ -80,19 +79,21 @@ input[type=checkbox] {
 
 //header 
 .contact-page {
-    background-image: url(../assets/contact-image.jpg);
-    background-position: left top;
-    // background-size: 1600 auto;
-    height: 60vh;
-        .header-contact {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 60vh;
-        }
+    header {
+        background-image: url(../assets/contact-image.jpg);
+        background-position: left top;
+        background-size: 1600px auto;
+        height: 60vh;
+            .header-contact {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 60vh;
+            }
+    }
 }
 
 .h1-contact {
     margin-left: 33%;
-    margin-bottom: 220px;
+    margin-bottom: 230px;
 }

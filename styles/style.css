@@ -434,9 +434,8 @@ input[type=checkbox] {
 .home-page header {
   background-image: url(../assets/header-image.jpg);
   background-position: 45% 0%;
-  background-size: 1550px;
+  background-size: 1600px auto;
   height: 80vh;
-  border: 1px solid red;
   position: relative;
 }
 
@@ -449,7 +448,7 @@ input[type=checkbox] {
   position: absolute;
   right: 0;
   top: 15vh;
-  width: 50vw;
+  width: 47vw;
 }
 
 .blog-page header {
@@ -458,13 +457,14 @@ input[type=checkbox] {
   background-size: 1550px;
 }
 
-.contact-page {
+.contact-page header {
   background-image: url(../assets/contact-image.jpg);
   background-position: left top;
+  background-size: 1600px auto;
   height: 60vh;
 }
 
-.contact-page .header-contact {
+.contact-page header .header-contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -480,7 +480,7 @@ input[type=checkbox] {
 
 .h1-contact {
   margin-left: 33%;
-  margin-bottom: 220px;
+  margin-bottom: 230px;
 }
 
 .about-section {
@@ -523,83 +523,95 @@ input[type=checkbox] {
   padding: 8px 18px;
 }
 
-.new-additions-section {
-  position: relative;
-  padding: 60px 0;
-}
-
-.new-additions-section .image-container {
-  width: calc(100% / 2 - 100px);
-}
-
-.new-additions-section .text-container {
-  width: calc(100% / 2 - 100px);
-}
-
-.new-additions-section .text-container p {
-  margin: 30px 0;
-}
-
-.new-additions-section .text-container .read-more {
-  padding: 8px 18px;
-  background-color: #882C07;
-}
-
-.new-additions-section .text-container .read-more:hover,
-.new-additions-section .text-container .read-more:focus,
-.new-additions-section .text-container .read-more:active {
-  background-color: #FE6F19;
-}
-
 .top-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .top-container .image-container {
-  position: absolute;
-  top: -30px;
-  left: 0;
+  margin-bottom: 40px;
 }
 
 .top-container .image-container img {
   -webkit-box-shadow: 30px 30px #FE6F19;
           box-shadow: 30px 30px #FE6F19;
+  position: relative;
+  bottom: 30px;
+  right: 70px;
 }
 
 .top-container .text-container {
-  margin-bottom: 50px;
+  padding-left: 70px;
 }
 
 .bottom-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.bottom-container .image-container {
-  margin-left: 100px;
-  position: absolute;
-  bottom: -30px;
-  right: 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: right;
 }
 
 .bottom-container .image-container img {
   -webkit-box-shadow: -30px 30px #FE6F19;
           box-shadow: -30px 30px #FE6F19;
+  position: relative;
+  top: 30px;
+  left: 70px;
 }
 
 .bottom-container .text-container {
-  margin-top: 50px;
-  text-align: right;
+  padding-right: 70px;
+}
+
+.top-container .text-container,
+.bottom-container .text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.top-container .text-container p,
+.bottom-container .text-container p {
+  margin: 30px 0;
+}
+
+.top-container .text-container .read-more,
+.bottom-container .text-container .read-more {
+  padding: 8px 18px;
+  background-color: #882C07;
+}
+
+.top-container .text-container .read-more:hover,
+.top-container .text-container .read-more:focus,
+.top-container .text-container .read-more:active,
+.bottom-container .text-container .read-more:hover,
+.bottom-container .text-container .read-more:focus,
+.bottom-container .text-container .read-more:active {
+  background-color: #FE6F19;
+}
+
+.top-container .image-container,
+.top-container .text-container,
+.bottom-container .image-container,
+.bottom-container .text-container {
+  width: calc(100% / 2);
 }
 
 .icons-section {
@@ -625,6 +637,10 @@ input[type=checkbox] {
   display: flex;
   width: 50%;
   padding: 0 20px 60px 0;
+}
+
+.icons-section .image-container img {
+  width: 100%;
 }
 
 .icons-section a i {
@@ -886,6 +902,42 @@ button:hover,
 button:focus,
 button:active {
   background-color: #FE6F19;
+}
+
+.blog-page main {
+  background-color: #FAE5FF;
+}
+
+.flex-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.flex-top aside {
+  width: calc(100% / 3 - 25px);
+  margin-right: 50px;
+  background-color: #FFFFFF;
+}
+
+.flex-top aside ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.flex-top article {
+  width: calc(100% / 1.5 - 25px);
+  background-color: #FFFFFF;
 }
 
 footer {

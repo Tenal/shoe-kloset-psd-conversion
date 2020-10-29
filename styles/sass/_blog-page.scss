@@ -1,0 +1,28 @@
+
+//NOTE: check how many levels you can indent in
+
+.blog-page {
+    main {
+        background-color: $mauve;
+    }
+}
+
+.flex-top {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+        aside {
+            width: calc(100% / 3 - 25px);
+            margin-right: 50px;
+            background-color: $white;
+                ul {
+                    list-style: disc;
+                    padding-left: 20px;
+                }
+        }
+        article {
+            width: calc(100% / 1.5 - 25px);
+            background-color: $white;
+        }
+}
