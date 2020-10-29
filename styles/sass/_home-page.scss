@@ -4,7 +4,7 @@
 // ABOUT US SECTION
 .about-section {
     background-color: $mauve;
-    padding: 180px 0;
+    padding: 200px 0 180px 0;
     .about-container {
         display: flex;
         flex-direction: column;
@@ -31,27 +31,132 @@
 
 
 
+
+
+
+// NEW ADDITIONS SECTION
+.new-additions-section {
+    position: relative;
+    padding: 60px 0;
+    .image-container {
+        width: calc(100% / 2 - 100px);
+    }
+    .text-container {
+        width: calc(100% / 2 - 100px);
+            p {
+                margin: 30px 0;
+            }
+            .read-more {
+                padding: 8px 18px;
+                background-color: $brown;
+            }
+            .read-more:hover,
+            .read-more:focus,
+            .read-more:active {
+                background-color: $orange;
+            }
+    }
+}
+
+.top-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    .image-container {
+        position: absolute;
+        top: -30px;
+        left: 0;
+            img {
+                box-shadow: 30px 30px $orange;
+            }
+    }
+    .text-container {
+        margin-bottom: 50px;
+    }
+}
+
+.bottom-container {
+    display: flex;
+    .image-container {
+        margin-left: 100px;
+        position: absolute;
+        bottom: -30px;
+        right: 0;
+            img {
+                box-shadow: -30px 30px $orange;
+            }
+    }
+    .text-container {
+        margin-top: 50px;
+        text-align: right;
+    }
+}
+
+
+
+
+// ICONS SECTION
+.icons-section {
+    background-color: $mauve;
+    padding-top: 120px;
+    .social-icons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 30px;
+            li {
+                display: flex;
+                width: 50%;
+                padding: 0 20px 60px 0;
+            }
+    }
+}
+
+.icons-section {
+    a {
+        i {
+            font-size: 2.7rem;
+            color: $white;
+            background-color: $plum;
+            width: 5rem;
+            height: 5rem;
+            text-align: center;
+            padding: 10px;
+            margin: 0 20px;
+            border-radius: 50%;
+        }
+    }    
+    a:hover i,
+    a:focus i,
+    a:active i {
+        background-color: $orange;
+    }
+}
+
+
+
 // POPULAR THIS MONTH SECTION
 .popular-section {
     display: flex;
-    padding: 120px 0 60px 0;
+    padding: 80px 0 80px 0;
+    align-items: center;
+    justify-content: center;
         .image-container {
-            width: calc(30% - 40px);
+            width: calc(30% - 80px);
             margin-right: 80px;
-            position: relative;
+            min-width: 200px;
                 img {
                     box-shadow: 30px 30px $orange;
-                    position: absolute;
                     bottom: 30px;
                 }
         }
         .text-container {
-            width: calc(70% - 40px);
+            width: calc(70% - 80px);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: flex-start;
-            border: 1px solid red;
+            padding-top: 50px;
                 p {
                     margin: 30px 0;
                 }
@@ -68,60 +173,10 @@
 
 
 
-
-// NEW ADDITIONS SECTION
-.new-additions-section {
-    position: relative;
-    padding: 60px 0;
-    .image-container {
-        width: calc(100% / 2 - 100px);
-    }
-    .text-container {
-        width: calc(100% / 2 - 100px);
-    }
-}
-
-.top-container {
-    display: flex;
-    flex-direction: row-reverse;
-    .image-container {
-        margin-right: 100px;
-        position: absolute;
-        top: -30px;
-        left: 0;
-            img {
-                box-shadow: 30px 30px $orange;
-            }
-    }
-}
-
-.bottom-container {
-    display: flex;
-    .image-container {
-        margin-left: 100px;
-        position: absolute;
-        bottom: -30px;
-        right: 0;
-            img {
-                box-shadow: -30px 30px $orange;
-            }
-    }
-}
-
-
-
-
-// ICONS SECTION
-.icons-section {
-    background-color: $mauve;
-}
-
-
-
 // GALLERY SECTION
 .gallery-section {
     background-color: $mauve;
-    padding: 60px 0;
+    padding: 80px 0;
         ul {
             display: flex;
                 li {

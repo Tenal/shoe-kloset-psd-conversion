@@ -22,7 +22,8 @@ nav {
 
 // REVIEW - IS THIS CORRECT OR SHOULD I NEST???
 button,
-.find-more {
+.find-more,
+.read-more {
     @include body-font(20);
     text-transform: uppercase;
     line-height: 32px;
@@ -75,7 +76,9 @@ h2 {
 }
 
 .icons-section {
-    h2 { 
+    h4 { 
+        @include heading-font(52);
+        line-height: 5.2rem;
         letter-spacing: 1.6px;
     }
 }
@@ -84,6 +87,7 @@ h2 {
     h3 { 
         @include heading-font(42);
         letter-spacing: 1.3px;
+        color: $black;
     }
 }
 

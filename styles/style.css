@@ -289,7 +289,8 @@ nav a {
 }
 
 button,
-.find-more {
+.find-more,
+.read-more {
   font-size: 2rem;
   font-weight: 400;
   font-family: 'Lato', sans-serif;
@@ -357,7 +358,12 @@ h2 {
   letter-spacing: 1.2px;
 }
 
-.icons-section h2 {
+.icons-section h4 {
+  font-size: 5.2rem;
+  font-weight: 400;
+  font-family: 'Pompiere', cursive;
+  text-transform: uppercase;
+  line-height: 5.2rem;
   letter-spacing: 1.6px;
 }
 
@@ -367,6 +373,7 @@ h2 {
   font-family: 'Pompiere', cursive;
   text-transform: uppercase;
   letter-spacing: 1.3px;
+  color: #0D0D0D;
 }
 
 .aside-container h3 {
@@ -445,6 +452,12 @@ input[type=checkbox] {
   width: 50vw;
 }
 
+.blog-page header {
+  background-image: url(../assets/blog-header.jpg);
+  height: 60vh;
+  background-size: 1550px;
+}
+
 .contact-page {
   background-image: url(../assets/contact-image.jpg);
   background-position: left top;
@@ -472,7 +485,7 @@ input[type=checkbox] {
 
 .about-section {
   background-color: #FAE5FF;
-  padding: 180px 0;
+  padding: 200px 0 180px 0;
 }
 
 .about-section .about-container {
@@ -510,58 +523,6 @@ input[type=checkbox] {
   padding: 8px 18px;
 }
 
-.popular-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 120px 0 60px 0;
-}
-
-.popular-section .image-container {
-  width: calc(30% - 40px);
-  margin-right: 80px;
-  position: relative;
-}
-
-.popular-section .image-container img {
-  -webkit-box-shadow: 30px 30px #FE6F19;
-          box-shadow: 30px 30px #FE6F19;
-  position: absolute;
-  bottom: 30px;
-}
-
-.popular-section .text-container {
-  width: calc(70% - 40px);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  border: 1px solid red;
-}
-
-.popular-section .text-container p {
-  margin: 30px 0;
-}
-
-.popular-section .text-container .find-more {
-  background-color: #882C07;
-}
-
-.popular-section .text-container .find-more:hover,
-.popular-section .text-container .find-more:focus,
-.popular-section .text-container .find-more:active {
-  background-color: #FE6F19;
-}
-
 .new-additions-section {
   position: relative;
   padding: 60px 0;
@@ -575,18 +536,35 @@ input[type=checkbox] {
   width: calc(100% / 2 - 100px);
 }
 
+.new-additions-section .text-container p {
+  margin: 30px 0;
+}
+
+.new-additions-section .text-container .read-more {
+  padding: 8px 18px;
+  background-color: #882C07;
+}
+
+.new-additions-section .text-container .read-more:hover,
+.new-additions-section .text-container .read-more:focus,
+.new-additions-section .text-container .read-more:active {
+  background-color: #FE6F19;
+}
+
 .top-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .top-container .image-container {
-  margin-right: 100px;
   position: absolute;
   top: -30px;
   left: 0;
@@ -595,6 +573,10 @@ input[type=checkbox] {
 .top-container .image-container img {
   -webkit-box-shadow: 30px 30px #FE6F19;
           box-shadow: 30px 30px #FE6F19;
+}
+
+.top-container .text-container {
+  margin-bottom: 50px;
 }
 
 .bottom-container {
@@ -615,13 +597,114 @@ input[type=checkbox] {
           box-shadow: -30px 30px #FE6F19;
 }
 
+.bottom-container .text-container {
+  margin-top: 50px;
+  text-align: right;
+}
+
 .icons-section {
   background-color: #FAE5FF;
+  padding-top: 120px;
+}
+
+.icons-section .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.icons-section .social-icons li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  padding: 0 20px 60px 0;
+}
+
+.icons-section a i {
+  font-size: 2.7rem;
+  color: #FFFFFF;
+  background-color: #4C0341;
+  width: 5rem;
+  height: 5rem;
+  text-align: center;
+  padding: 10px;
+  margin: 0 20px;
+  border-radius: 50%;
+}
+
+.icons-section a:hover i,
+.icons-section a:focus i,
+.icons-section a:active i {
+  background-color: #FE6F19;
+}
+
+.popular-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 80px 0 80px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.popular-section .image-container {
+  width: calc(30% - 80px);
+  margin-right: 80px;
+  min-width: 200px;
+}
+
+.popular-section .image-container img {
+  -webkit-box-shadow: 30px 30px #FE6F19;
+          box-shadow: 30px 30px #FE6F19;
+  bottom: 30px;
+}
+
+.popular-section .text-container {
+  width: calc(70% - 80px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-top: 50px;
+}
+
+.popular-section .text-container p {
+  margin: 30px 0;
+}
+
+.popular-section .text-container .find-more {
+  background-color: #882C07;
+}
+
+.popular-section .text-container .find-more:hover,
+.popular-section .text-container .find-more:focus,
+.popular-section .text-container .find-more:active {
+  background-color: #FE6F19;
 }
 
 .gallery-section {
   background-color: #FAE5FF;
-  padding: 60px 0;
+  padding: 80px 0;
 }
 
 .gallery-section ul {
@@ -669,23 +752,23 @@ input[type=checkbox] {
   left: 30px;
 }
 
-.social-icons ul {
+.address-container .social-icons ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   color: #4C0341;
 }
 
-.social-icons ul li {
+.address-container .social-icons ul li {
   font-size: 2.3rem;
   margin-right: 20px;
 }
 
-.social-icons a {
+.address-container .social-icons a {
   padding: 5px 5px 5px 0;
 }
 
-.social-icons a:hover {
+.address-container .social-icons a:hover {
   color: #FE6F19;
 }
 

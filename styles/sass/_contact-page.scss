@@ -28,23 +28,27 @@
         }
 }
 
-.social-icons {
-    ul {
-        display: flex;
-        color: $plum;
-            li {
-                font-size: 2.3rem;
-                margin-right: 20px;
-            }
+.address-container {
+    .social-icons {
+        ul {
+            display: flex;
+            color: $plum;
+                li {
+                    font-size: 2.3rem;
+                    margin-right: 20px;
+                }
+        }
     }
 }
 
-.social-icons {
-    a {
-        padding: 5px 5px 5px 0;
-    }
-    a:hover {
-        color: $orange;
+.address-container {
+    .social-icons {
+        a {
+            padding: 5px 5px 5px 0;
+        }
+        a:hover {
+            color: $orange;
+        }
     }
 }
 
