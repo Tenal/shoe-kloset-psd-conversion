@@ -1,0 +1,90 @@
+// SECTION: GLOBAL STYLING 
+header {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding-top: 30px;
+        .logo-and-nav-container {
+            display: flex;
+            justify-content: space-between;
+                .logo {
+                    width: 100px;
+                }
+    }
+}
+
+
+// desktop nav menu
+.header-menu {
+    display: flex;
+        li {
+            margin-right: 15px;
+                a {
+                    padding: 5px 12px;
+                }
+                a:hover {
+                    color: $white;
+                    background-color: $plum;
+                }
+        }
+            li:last-of-type {
+                margin-right: 0;
+        }
+}
+
+// mobile hamburger menu
+label, 
+input[type=checkbox] {
+    display: none;
+}
+
+
+
+
+
+
+// SECTION: HOME PAGE STYLING
+.home-page {
+    header {
+        background-image: url(../assets/header-image.jpg);
+        background-position: 45% 0%;
+        background-size: 1550px;
+        height: 80vh;
+        border: 1px solid red;
+        position: relative;
+            h1 {
+                margin-top: 100px;
+                width: 350px;
+            }
+            img {
+                position: absolute;
+                right: 0;
+                top: 15vh;
+                width: 50vw;
+            }
+    }
+}
+
+
+// SECTION: BLOG PAGE STYLING
+
+
+// SECTION: CONTACT PAGE STYLING
+
+//header 
+.contact-page {
+    background-image: url(../assets/contact-image.jpg);
+    background-position: left top;
+    // background-size: 1600 auto;
+    height: 60vh;
+        .header-contact {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 60vh;
+        }
+}
+
+.h1-contact {
+    margin-left: 33%;
+    margin-bottom: 220px;
+}

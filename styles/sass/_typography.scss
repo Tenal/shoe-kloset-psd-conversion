@@ -22,7 +22,7 @@ nav {
 
 // REVIEW - IS THIS CORRECT OR SHOULD I NEST???
 button,
-.button {
+.find-more {
     @include body-font(20);
     text-transform: uppercase;
     line-height: 32px;
@@ -54,7 +54,7 @@ footer {
 .h1-main {
     @include heading-font(110);
     text-transform: initial;
-    line-height: 64px;
+    line-height: 6.4rem;
     color: $plum;
 }
 
@@ -66,6 +66,8 @@ footer {
 
 h2 {
     @include heading-font(52);
+    line-height: 5.2rem;
+    color: $plum;
 }
 
 .h2-main {

@@ -1,30 +1,14 @@
-//header section
-header {
-    background-image: url(.../assets\contact-image.jpg);
-    height: 75vh;
-    padding-top: 30px;
-        .logo-and-nav-container {
-            display: flex;
-            justify-content: space-between;
-                .logo {
-                    width: 100px;
-                }
-    }
-}
-
-.h1-contact {
-    margin-left: 33%;
-    margin-top: 6%;
-}
+// SECTION: MAIN
 
 
 
 
 
-// main section
+// general layout & address container styling
 .main-contact {
     background-color: $mauve;
 }
+
 .main-section {
     display: flex;
     justify-content: space-between;
@@ -75,7 +59,7 @@ form {
     display: flex;
     flex-direction: column;
     background-color: $white;
-    box-shadow: -30px 30px $orange;
+    box-shadow: -35px 35px $orange;
         .name-and-email {
             display: flex;
             justify-content: center;
@@ -86,20 +70,20 @@ form {
                 margin: 60px 15px 0 15px;
             }
             .name-box {
-                margin-left: 40px;
+                margin-left: 60px;
             }
             .email-box {
-                margin-right: 40px;
+                margin-right: 60px;
             }
         .message-box {
             textarea {
-                width: calc(100% - 80px);
+                width: calc(100% - 120px);
                 resize: none;
-                margin: 40px;
+                margin: 60px;
             }
         }
         button {
-            margin-bottom: 40px;
+            margin-bottom: 60px;
             align-self: center;
         }
 }
@@ -109,6 +93,9 @@ form {
         width: 100%;
     }
 }
+
+
+
 
 // form input styling 
 input, 
@@ -140,28 +127,27 @@ textarea::placeholder {
     opacity: 1;
 }
 
+
+
+
 // form button styling
 button {
     border: none;
     cursor: pointer;
     background-color: $brown;
     padding: 5px 0;
-    margin: 0 40px;
-    width: calc(100% - 80px);
+    margin: 0 60px;
+    width: calc(100% - 120px);
 }
 
 button:hover,
 button:focus,
 button:active {
-    background-color: $plum;
+    background-color: $orange;
 }
 
 
 
 
-// footer
-footer {
-    background-color: $brown;
-    text-align: center;
-}
+
 

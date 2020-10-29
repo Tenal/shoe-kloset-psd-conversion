@@ -1,0 +1,134 @@
+
+
+
+// ABOUT US SECTION
+.about-section {
+    background-color: $mauve;
+    padding: 180px 0;
+    .about-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+            p {
+                margin: 30px 0;
+            }
+            .find-more {
+                background-color: $plum;
+            }
+            .find-more:hover,
+            .find-more:focus,
+            .find-more:active {
+                background-color: $orange;
+            }
+    }
+}
+
+.find-more {
+    padding: 8px 18px;
+}
+
+
+
+// POPULAR THIS MONTH SECTION
+.popular-section {
+    display: flex;
+    padding: 120px 0 60px 0;
+        .image-container {
+            width: calc(30% - 40px);
+            margin-right: 80px;
+            position: relative;
+                img {
+                    box-shadow: 30px 30px $orange;
+                    position: absolute;
+                    bottom: 30px;
+                }
+        }
+        .text-container {
+            width: calc(70% - 40px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            border: 1px solid red;
+                p {
+                    margin: 30px 0;
+                }
+                .find-more {
+                    background-color: $brown;
+                }
+                .find-more:hover,
+                .find-more:focus,
+                .find-more:active {
+                    background-color: $orange;
+                }
+        }
+}
+
+
+
+
+// NEW ADDITIONS SECTION
+.new-additions-section {
+    position: relative;
+    padding: 60px 0;
+    .image-container {
+        width: calc(100% / 2 - 100px);
+    }
+    .text-container {
+        width: calc(100% / 2 - 100px);
+    }
+}
+
+.top-container {
+    display: flex;
+    flex-direction: row-reverse;
+    .image-container {
+        margin-right: 100px;
+        position: absolute;
+        top: -30px;
+        left: 0;
+            img {
+                box-shadow: 30px 30px $orange;
+            }
+    }
+}
+
+.bottom-container {
+    display: flex;
+    .image-container {
+        margin-left: 100px;
+        position: absolute;
+        bottom: -30px;
+        right: 0;
+            img {
+                box-shadow: -30px 30px $orange;
+            }
+    }
+}
+
+
+
+
+// ICONS SECTION
+.icons-section {
+    background-color: $mauve;
+}
+
+
+
+// GALLERY SECTION
+.gallery-section {
+    background-color: $mauve;
+    padding: 60px 0;
+        ul {
+            display: flex;
+                li {
+                    width: calc(100 / 3 - 60px)
+                }
+        }
+        ul li:nth-child(2) {
+            margin: 0 30px 0 30px;
+        }
+}
