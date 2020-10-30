@@ -436,7 +436,7 @@ input[type=checkbox] {
   background-image: url(../assets/header-image.jpg);
   background-position: 45% 0%;
   background-size: cover;
-  min-height: 90vh;
+  min-height: 100vh;
   position: relative;
 }
 
@@ -468,9 +468,9 @@ input[type=checkbox] {
 
 .contact-page header {
   background-image: url(../assets/contact-image.jpg);
-  background-position: left top;
+  background-position: 65% 0%;
   background-size: cover;
-  min-height: 60vh;
+  min-height: 70vh;
 }
 
 .contact-page header .header-contact {
@@ -484,14 +484,32 @@ input[type=checkbox] {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 60vh;
+  height: 70vh;
 }
 
-.h1-contact {
+.contact-page header .header-contact .h1-contact {
   margin-left: 33%;
-  margin-bottom: 230px;
+  margin-bottom: 200px;
 }
 
+/* ------------------- MEDIA QUERIES ------------------- */
+/* MINOR BREAKPOINT 1: updating header text for accessibility/visibility */
+@media (max-width: 1380px) {
+  .home-page header h1,
+  .home-page header nav {
+    text-shadow: 1px 1px 2px #FFFFFF;
+  }
+}
+
+/* MAJOR BREAKPOINT 1: small desktop & portrait tablet */
+@media (max-width: 940px) {
+  .home-page header img {
+    display: none;
+  }
+}
+
+/* MAJOR BREAKPOINT 2: portrait tablet & landscape phone */
+/* MAJOR BREAKPOINT 3: landscape phone & down */
 .about-section {
   background-color: #FAE5FF;
   padding: 200px 0 180px 0;
@@ -520,16 +538,13 @@ input[type=checkbox] {
 
 .about-section .about-container .find-more {
   background-color: #4C0341;
+  padding: 8px 18px;
 }
 
 .about-section .about-container .find-more:hover,
 .about-section .about-container .find-more:focus,
 .about-section .about-container .find-more:active {
   background-color: #FE6F19;
-}
-
-.find-more {
-  padding: 8px 18px;
 }
 
 .top-container {
@@ -746,6 +761,10 @@ input[type=checkbox] {
   margin: 0 30px 0 30px;
 }
 
+/* ------------------- MEDIA QUERIES ------------------- */
+/* MAJOR BREAKPOINT 1: small desktop & portrait tablet */
+/* MAJOR BREAKPOINT 2: portrait tablet & landscape phone */
+/* MAJOR BREAKPOINT 3: landscape phone & down */
 .main-contact {
   background-color: #FAE5FF;
 }
@@ -982,7 +1001,7 @@ article .text-container .date-paragraph {
 }
 
 .comments-and-form h2 {
-  margin: 40px 0;
+  margin: 40px 0 20px 0;
 }
 
 .comments {
@@ -1046,6 +1065,7 @@ article .text-container .date-paragraph {
 
 aside {
   padding: 300px 15px 30px 15px;
+  max-width: 350px;
   position: relative;
 }
 

@@ -61,7 +61,7 @@ article {
     padding-right: 10%;  
     background-color: $mauve;  
         h2 {
-            margin: 40px 0;
+            margin: 40px 0 20px 0;
         }
 }
 
@@ -124,7 +124,7 @@ article {
 // aside section
 aside {
     padding: 300px 15px 30px 15px;
-    // max-width: 350px;
+    max-width: 350px;
     position: relative;
         img {
             position: absolute;
