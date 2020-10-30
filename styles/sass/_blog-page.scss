@@ -1,85 +1,109 @@
-
 //NOTE: check how many levels you can indent in
+// NOTE: change some divs to sections
 
-.blog-page {
-    main {
-        background-color: $mauve;
-    }
-}
 
-.flex-container {
-    padding: 100px 0;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: flex-start;
-        
-        .flex-right {
-            width: calc(100% / 1.5 - 25px);
-            
+
+// main section
+.blog-page main {
+    background-color: $mauve;
+        .flex-container {
+            padding: 100px 0;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: flex-start;
+                .flex-right {
+                    width: calc(63% - 25px);
+                }
+                .flex-left {
+                    flex: 1 0 50px;
+                    max-width: 500px;
+                    width: calc(37% - 25px);
+                    margin: 0 50px 0 5%;
+                    background-color: $white;
+                    max-width: 380px;
+                }
         }
 }
 
+
+// article section
 article {
     .image-container {
         position: relative;
-        img {
-            box-shadow: -30px 30px $orange;
-            position: absolute;
-            bottom: -150px;
-            right: 0;
-            width: 95%;
-        }
+            img {
+                box-shadow: -30px 30px $orange;
+                position: absolute;
+                bottom: -250px;
+                right: 0;
+                width: 95%;
+                // max-width: 880px;
+            }
     }
     .text-container {
         background-color: $white;
-        padding: 200px 10% 0 0;
+        padding: 320px 10% 40px 40px;
+            p {
+                margin-top: 30px;
+            }
+            .date-paragraph {
+                margin: 0;
+                font-weight: 700;
+            }
     }
 }
 
-.blog-comments {
-    background-color: $mauve;
+
+
+
+// blog comments section
+.comments-and-form {
+    padding-right: 10%;  
+    background-color: $mauve;  
+        h2 {
+            margin: 40px 0;
+        }
 }
 
-
-.flex-left {
-    // flex: 1 0 50px;
-    // margin: 0 50px 0 8%;
-    max-width: 500px;
-    width: calc(100% / 3 - 25px);
-    margin: 0 50px 0 5%;
-    background-color: $white;
+.comments {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+        img {
+            width: calc(15% - 10px);
+            margin: 8px 20px 0 0;
+        }
+        div {
+            width: calc(85% - 10px);
+            margin-bottom: 80px;
+                p:first-of-type {
+                    font-weight: 700;
+                    margin-bottom: 5px;
+                }
+        }
 }
 
 
 
 
 // form section
-.comments-and-form {
-    padding-right: 10%;    
-}
-
 .blog-form {
     box-shadow: none;
     background-color: $mauve;
-
         .name-box {
             margin: 0 30px 0 0;
             width: calc(100% / 2 - 15px);
         }
-
         .email-box {
             margin: 0;
             width: calc(100% / 2 - 15px);
         }
-
         .name-box,
         .email-box {
             input {
                 background-color: $mauve;
             }
         }
-
         .message-box {
             textarea {
                 margin: 30px 0 30px 0;
@@ -87,7 +111,6 @@ article {
                 background-color: $mauve;
             }
         }
-
         button {
             background-color: $plum;
             width: 100%;
@@ -100,31 +123,28 @@ article {
 
 // aside section
 aside {
-    padding: 300px 10px 5px 5px;
+    padding: 300px 15px 30px 15px;
+    // max-width: 350px;
     position: relative;
-
-    img {
-        position: absolute;
-        top: -30px;
-        left: -20%;
-        width: 125%;
-    }
-
-    h3 {
-        margin: 40px 0 10px 0;
-    } 
-
-    ul {
-        list-style: disc;
-        padding-left: 20px;
-
-        a {
-            border-bottom: 2px solid white;
+        img {
+            position: absolute;
+            top: -15px;
+            left: -15%;
+            width: 125%;
         }
-        a:hover,
-        a:focus,
-        a:active {
-            border-bottom: 2px solid $orange;
+        h3 {
+            margin: 40px 0 10px 0;
+        } 
+        ul {
+            list-style: disc;
+            padding-left: 20px;
+                a {
+                    border-bottom: 2px solid white;
+                }
+                a:hover,
+                a:focus,
+                a:active {
+                    border-bottom: 2px solid $orange;
+                }
         }
-    }
 }
