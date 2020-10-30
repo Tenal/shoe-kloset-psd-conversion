@@ -91,9 +91,10 @@ h2 {
     }
 }
 
-.aside-container {
+.flex-left {
     h3 { 
         @include heading-font(30);
         letter-spacing: 1.3px;
+        color: $plum;
     }
 }
