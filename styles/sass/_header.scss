@@ -47,7 +47,7 @@ input[type=checkbox] {
     header {
         background-image: url(../assets/header-image.jpg);
         background-position: 45% 0%;
-        background-size: 1600px auto;
+        background-size: cover;
         height: 80vh;
         position: relative;
             h1 {
@@ -69,7 +69,7 @@ input[type=checkbox] {
     header {
         background-image: url(../assets/blog-header.jpg);
         height: 60vh;
-        background-size: 1550px;
+        background-size: cover;
             h1 {
                 position: absolute;
                 left: 40%;
@@ -86,7 +86,7 @@ input[type=checkbox] {
     header {
         background-image: url(../assets/contact-image.jpg);
         background-position: left top;
-        background-size: 1600px auto;
+        background-size: cover;
         height: 60vh;
             .header-contact {
                 display: flex;
