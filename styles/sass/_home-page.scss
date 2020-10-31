@@ -102,9 +102,15 @@
                 padding: 0 20px 60px 0;
             }
     }
+    .social-icons li:nth-child(2),
+    .social-icons li:nth-child(4) {
+        padding: 0 0 60px 0;
+    }
     .image-container {
         img {
             width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
         }
     }
 }
@@ -191,7 +197,10 @@
 @media (max-width: 940px) {
     // ABOUT SECTION
     .about-section {
-        padding: 80px 0 80px 0
+        padding: 80px 0 80px 0;
+            h2 {
+                font-size: 4.8rem;
+            }
     }
 
     // NEW ADDITIONS SECTION
@@ -242,16 +251,8 @@
     // ICONS SECTION
     .icons-section {
         padding-top: 80px;
-            .social-icons {
-                text-align: center;
-                    li {
-                        width: 100%;
-                        display: flex;
-                        flex-direction: column;
-                    }
-                    li a {
-                        margin-bottom: 20px;
-                    }
+            h2 {
+                font-size: 4.8rem;
             }
     }
 
@@ -262,6 +263,7 @@
         align-items: center;
             .image-container {
                 width: 100%;
+                margin: 0;
                     img {
                         margin: 0 auto;
                         box-shadow: 20px 20px $orange;
@@ -271,7 +273,7 @@
                 width: 100%;
                 align-items: center;
                 text-align: center;
-                margin-top: 40px;
+                margin-top: 60px;
                 padding: 0;
             }
     }
@@ -298,13 +300,13 @@
     }
 
     .top-container {
-        .text-container {
-            margin: 30px 0 60px 0;
-        }
         .image-container {
             img {
                 box-shadow: 10px 10px $orange;
             }
+        }
+        .text-container {
+            margin: 30px 0 60px 0;
         }
     }
 
@@ -316,6 +318,35 @@
         }
         .text-container {
             margin-top: 30px;
+        }
+    }
+
+    // ICONS SECTION
+    .icons-section {
+            .social-icons {
+                text-align: center;
+                    li {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        padding: 0 0 60px 0;
+                    }
+                    li a {
+                        margin-bottom: 20px;
+                    }
+            }
+    }
+
+    // GALLERY SECTION
+    .gallery-section {
+        ul li {
+            width: calc(50% - 15px);
+        }
+        ul li:nth-child(2) {
+            margin: 0 0 0 30px;
+        }
+        ul li:nth-child(3) {
+            display: none;
         }
     }
 }
@@ -339,5 +370,19 @@
     // ICONS SECTION
     .icons-section {
         padding-top: 60px;
+            .social-icons li:last-child {
+                padding: 0 0 25px 0;
+            }
     }
+
+    // POPULAR THIS MONTH SECTION
+    .popular-section {
+        padding: 60px 0;
+    }
+
+    // GALLERY SECTION
+    .gallery-section {
+        padding: 60px 0;
+    }
+
 }
