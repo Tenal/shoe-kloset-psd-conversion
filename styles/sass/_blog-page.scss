@@ -103,6 +103,7 @@ form.blog-form {
             margin: 30px 0 30px 0;
             width: 100%;
             background-color: $mauve;
+            resize: none;
         }
         button {
             background-color: $plum;
@@ -201,10 +202,62 @@ aside {
 
 /* MAJOR BREAKPOINT 2: portrait tablet & landscape phone */
 @media (max-width: 768px) {
-
+    // article section
+    .flex-container article img {
+        box-shadow: -20px 20px $orange;
+        width: calc(100% - 20px);
+        left: 20px;
+    }
+    
+    //form section
+    form.blog-form {
+        .name-and-email {
+            display: block;
+                .name-box {
+                    margin: 0;
+                    width: 100%;
+                }
+                .email-box {
+                    margin: 0;
+                    width: 100%;
+                }
+        }
+    }
 }
+
+
+
 
 /* MAJOR BREAKPOINT 3: landscape phone & down */
 @media (max-width: 480px) {
+    //main section
+    .blog-page main .flex-container {
+        padding: 60px 0;
+            article {
+                .image-container img {
+                    box-shadow: -10px 10px $orange;
+                    width: calc(100% - 10px);
+                    left: 10px;
+                    top: 0px;
+                }
+                .text-container {
+                    padding-top: 80%;
+                }
+            }
+            .comments-and-form .blog-form {
+                margin-bottom: 60px;
+            }
+    }
 
+    //comments section
+    .comments {
+        img {
+            width: calc(20% - 5px);
+            margin: 2px 10px 0 0;
+        }
+        div {
+            width: calc(80% - 10px);
+            margin-bottom: 50px;
+        }
+    }
 }

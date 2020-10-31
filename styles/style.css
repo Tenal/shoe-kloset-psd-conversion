@@ -1320,6 +1320,7 @@ form.blog-form .message-box textarea {
   margin: 30px 0 30px 0;
   width: 100%;
   background-color: #FAE5FF;
+  resize: none;
 }
 
 form.blog-form button {
@@ -1415,7 +1416,54 @@ aside ul a:active {
 }
 
 /* MAJOR BREAKPOINT 2: portrait tablet & landscape phone */
+@media (max-width: 768px) {
+  .flex-container article img {
+    -webkit-box-shadow: -20px 20px #FE6F19;
+            box-shadow: -20px 20px #FE6F19;
+    width: calc(100% - 20px);
+    left: 20px;
+  }
+  form.blog-form .name-and-email {
+    display: block;
+  }
+  form.blog-form .name-and-email .name-box {
+    margin: 0;
+    width: 100%;
+  }
+  form.blog-form .name-and-email .email-box {
+    margin: 0;
+    width: 100%;
+  }
+}
+
 /* MAJOR BREAKPOINT 3: landscape phone & down */
+@media (max-width: 480px) {
+  .blog-page main .flex-container {
+    padding: 60px 0;
+  }
+  .blog-page main .flex-container article .image-container img {
+    -webkit-box-shadow: -10px 10px #FE6F19;
+            box-shadow: -10px 10px #FE6F19;
+    width: calc(100% - 10px);
+    left: 10px;
+    top: 0px;
+  }
+  .blog-page main .flex-container article .text-container {
+    padding-top: 80%;
+  }
+  .blog-page main .flex-container .comments-and-form .blog-form {
+    margin-bottom: 60px;
+  }
+  .comments img {
+    width: calc(20% - 5px);
+    margin: 2px 10px 0 0;
+  }
+  .comments div {
+    width: calc(80% - 10px);
+    margin-bottom: 50px;
+  }
+}
+
 footer {
   background-color: #882C07;
   text-align: center;
