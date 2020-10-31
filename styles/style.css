@@ -286,6 +286,7 @@ nav a {
   text-transform: uppercase;
   line-height: 29px;
   letter-spacing: 1px;
+  text-shadow: 1px 1px 2px #FFFFFF;
 }
 
 button,
@@ -334,6 +335,7 @@ footer {
   text-transform: initial;
   line-height: 6.4rem;
   color: #4C0341;
+  text-shadow: 1px 1px 2px #FFFFFF;
 }
 
 .h1-secondary {
@@ -358,13 +360,14 @@ h2 {
   letter-spacing: 1.2px;
 }
 
-.icons-section h4 {
+.icons-section h2 {
   font-size: 5.2rem;
   font-weight: 400;
   font-family: 'Pompiere', cursive;
   text-transform: uppercase;
   line-height: 5.2rem;
   letter-spacing: 1.6px;
+  color: #0D0D0D;
 }
 
 .new-additions-section h3 {
@@ -434,7 +437,7 @@ input[type=checkbox] {
 
 .home-page header {
   background-image: url(../assets/header-image.jpg);
-  background-position: 45% 0%;
+  background-position: left bottom;
   background-size: cover;
   min-height: 100vh;
   position: relative;
@@ -468,7 +471,7 @@ input[type=checkbox] {
 
 .contact-page header {
   background-image: url(../assets/contact-image.jpg);
-  background-position: 65% 0%;
+  background-position: left bottom;
   background-size: cover;
   min-height: 70vh;
 }
@@ -494,13 +497,6 @@ input[type=checkbox] {
 
 /* ------------------- MEDIA QUERIES ------------------- */
 /* MINOR BREAKPOINT 1: updating header text for accessibility/visibility */
-@media (max-width: 1380px) {
-  .home-page header h1,
-  .home-page header nav {
-    text-shadow: 1px 1px 2px #FFFFFF;
-  }
-}
-
 /* MAJOR BREAKPOINT 1: small desktop & portrait tablet */
 @media (max-width: 940px) {
   .home-page header img {
@@ -557,7 +553,7 @@ input[type=checkbox] {
 }
 
 .top-container .image-container {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .top-container .image-container img {
@@ -570,6 +566,7 @@ input[type=checkbox] {
 
 .top-container .text-container {
   padding-left: 70px;
+  margin-top: 20px;
 }
 
 .bottom-container {
@@ -596,6 +593,7 @@ input[type=checkbox] {
 
 .bottom-container .text-container {
   padding-right: 70px;
+  margin-bottom: 20px;
 }
 
 .top-container .text-container,
@@ -734,6 +732,7 @@ input[type=checkbox] {
 
 .popular-section .text-container .find-more {
   background-color: #882C07;
+  padding: 8px 18px;
 }
 
 .popular-section .text-container .find-more:hover,
@@ -763,8 +762,135 @@ input[type=checkbox] {
 
 /* ------------------- MEDIA QUERIES ------------------- */
 /* MAJOR BREAKPOINT 1: small desktop & portrait tablet */
+@media (max-width: 940px) {
+  .about-section {
+    padding: 80px 0 80px 0;
+  }
+  .new-additions-section {
+    padding: 80px 0;
+  }
+  .top-container,
+  .bottom-container {
+    display: block;
+  }
+  .top-container .image-container,
+  .top-container .text-container,
+  .bottom-container .image-container,
+  .bottom-container .text-container {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0;
+  }
+  .top-container .image-container img,
+  .bottom-container .image-container img {
+    position: static;
+    margin: 0 auto;
+  }
+  .top-container .text-container,
+  .bottom-container .text-container {
+    text-align: center;
+    margin-top: 40px;
+  }
+  .top-container .text-container {
+    margin-bottom: 100px;
+  }
+  .top-container .image-container img {
+    -webkit-box-shadow: 20px 20px #FE6F19;
+            box-shadow: 20px 20px #FE6F19;
+  }
+  .bottom-container .image-container img {
+    -webkit-box-shadow: -20px 20px #FE6F19;
+            box-shadow: -20px 20px #FE6F19;
+  }
+  .icons-section {
+    padding-top: 80px;
+  }
+  .icons-section .social-icons {
+    text-align: center;
+  }
+  .icons-section .social-icons li {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .icons-section .social-icons li a {
+    margin-bottom: 20px;
+  }
+  .popular-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .popular-section .image-container {
+    width: 100%;
+  }
+  .popular-section .image-container img {
+    margin: 0 auto;
+    -webkit-box-shadow: 20px 20px #FE6F19;
+            box-shadow: 20px 20px #FE6F19;
+  }
+  .popular-section .text-container {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    margin-top: 40px;
+    padding: 0;
+  }
+}
+
 /* MAJOR BREAKPOINT 2: portrait tablet & landscape phone */
+@media (max-width: 768px) {
+  .top-container .text-container h3,
+  .bottom-container .text-container h3 {
+    font-size: 3.8rem;
+  }
+  .top-container .text-container p,
+  .bottom-container .text-container p {
+    margin: 20px 0;
+  }
+  .top-container .text-container {
+    margin: 30px 0 60px 0;
+  }
+  .top-container .image-container img {
+    -webkit-box-shadow: 10px 10px #FE6F19;
+            box-shadow: 10px 10px #FE6F19;
+  }
+  .bottom-container .image-container img {
+    -webkit-box-shadow: -10px 10px #FE6F19;
+            box-shadow: -10px 10px #FE6F19;
+  }
+  .bottom-container .text-container {
+    margin-top: 30px;
+  }
+}
+
 /* MAJOR BREAKPOINT 3: landscape phone & down */
+@media (max-width: 480px) {
+  .about-section {
+    padding: 60px 0;
+  }
+  .new-additions-section {
+    padding: 60px 0;
+  }
+  .icons-section {
+    padding-top: 60px;
+  }
+}
+
 .main-contact {
   background-color: #FAE5FF;
 }
@@ -945,12 +1071,14 @@ button:active {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .blog-page main .flex-container .flex-right {
@@ -962,10 +1090,14 @@ button:active {
       -ms-flex: 1 0 50px;
           flex: 1 0 50px;
   max-width: 500px;
-  width: calc(37% - 25px);
-  margin: 0 50px 0 5%;
+  width: calc(37% - 25px - 10%);
+  margin: 0 50px 0 5vw;
   background-color: #FFFFFF;
   max-width: 380px;
+}
+
+article {
+  width: 100%;
 }
 
 article .image-container {
@@ -977,13 +1109,15 @@ article .image-container img {
           box-shadow: -30px 30px #FE6F19;
   position: absolute;
   bottom: -250px;
-  right: 0;
-  width: 95%;
+  left: 30px;
+  width: 98%;
+  max-width: 800px;
 }
 
 article .text-container {
   background-color: #FFFFFF;
   padding: 320px 10% 40px 40px;
+  width: 100%;
 }
 
 article .text-container p {
@@ -1063,17 +1197,24 @@ article .text-container .date-paragraph {
   margin: 0;
 }
 
+.blog-form button:hover,
+.blog-form button:focus,
+.blog-form button:active {
+  background-color: #FE6F19;
+}
+
 aside {
-  padding: 300px 15px 30px 15px;
+  padding: 330px 15px 30px 15px;
   max-width: 350px;
   position: relative;
 }
 
 aside img {
   position: absolute;
-  top: -15px;
-  left: -15%;
-  width: 125%;
+  top: -20px;
+  left: -65px;
+  width: 120%;
+  max-width: 120%;
 }
 
 aside h3 {

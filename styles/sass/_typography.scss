@@ -17,6 +17,7 @@ nav {
     text-transform: uppercase;
     line-height: 29px;
     letter-spacing: 1px;
+    text-shadow: 1px 1px 2px $white;
     }
 }
 
@@ -57,6 +58,7 @@ footer {
     text-transform: initial;
     line-height: 6.4rem;
     color: $plum;
+    text-shadow: 1px 1px 2px $white;
 }
 
 .h1-secondary {
@@ -76,10 +78,11 @@ h2 {
 }
 
 .icons-section {
-    h4 { 
+    h2 { 
         @include heading-font(52);
         line-height: 5.2rem;
         letter-spacing: 1.6px;
+        color: $black;
     }
 }
 

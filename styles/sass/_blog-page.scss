@@ -10,16 +10,19 @@
             padding: 100px 0;
             display: flex;
             flex-direction: row-reverse;
-            justify-content: space-between;
+            justify-content: center;
             align-items: flex-start;
+            max-width: 1280px;
+            margin: 0 auto;
+            // NOTE: see if ABOVE WORKS
                 .flex-right {
                     width: calc(63% - 25px);
                 }
                 .flex-left {
                     flex: 1 0 50px;
                     max-width: 500px;
-                    width: calc(37% - 25px);
-                    margin: 0 50px 0 5%;
+                    width: calc(37% - 25px - 10%);
+                    margin: 0 50px 0 5vw;
                     background-color: $white;
                     max-width: 380px;
                 }
@@ -29,20 +32,22 @@
 
 // article section
 article {
+    width: 100%;
     .image-container {
         position: relative;
             img {
                 box-shadow: -30px 30px $orange;
                 position: absolute;
                 bottom: -250px;
-                right: 0;
-                width: 95%;
-                // max-width: 880px;
+                left: 30px;
+                width: 98%;
+                max-width: 800px;
             }
     }
     .text-container {
         background-color: $white;
         padding: 320px 10% 40px 40px;
+        width: 100%;
             p {
                 margin-top: 30px;
             }
@@ -116,6 +121,11 @@ article {
             width: 100%;
             margin: 0;
         }
+        button:hover, 
+        button:focus,
+        button:active {
+            background-color: $orange;
+        }
     }
 
 
@@ -123,14 +133,15 @@ article {
 
 // aside section
 aside {
-    padding: 300px 15px 30px 15px;
+    padding: 330px 15px 30px 15px;
     max-width: 350px;
     position: relative;
         img {
             position: absolute;
-            top: -15px;
-            left: -15%;
-            width: 125%;
+            top: -20px;
+            left: -65px;
+            width: 120%;
+            max-width: 120%;
         }
         h3 {
             margin: 40px 0 10px 0;
