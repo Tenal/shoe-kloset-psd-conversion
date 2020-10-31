@@ -289,7 +289,7 @@ nav a {
   text-shadow: 1px 1px 2px #FFFFFF;
 }
 
-button,
+form button,
 .find-more,
 .read-more {
   font-size: 2rem;
@@ -336,6 +336,7 @@ footer {
   line-height: 6.4rem;
   color: #4C0341;
   text-shadow: 1px 1px 2px #FFFFFF;
+  padding: 0 0 20px 0;
 }
 
 .h1-secondary {
@@ -347,6 +348,7 @@ footer {
   color: #4C0341;
   text-shadow: 1px 1px 2px #FFFFFF;
   z-index: 10;
+  padding: 0 0 10px 0;
 }
 
 h2 {
@@ -432,9 +434,26 @@ header .logo-and-nav-container .logo {
   margin-right: 0;
 }
 
-label,
-input[type=checkbox] {
+button.dropdown-menu {
+  background-color: transparent;
   display: none;
+}
+
+button.dropdown-menu:hover, button.dropdown-menu:focus, button.dropdown-menu:active {
+  background-color: transparent;
+}
+
+button.dropdown-menu i.fa-bars {
+  position: fixed;
+  right: 30px;
+  top: 20px;
+  z-index: 10;
+  text-shadow: 0px 3px 5px #1f2022;
+  color: white;
+  font-size: 5rem;
+  border-radius: 5px;
+  padding: 0 3px;
+  cursor: pointer;
 }
 
 .home-page header {
@@ -461,15 +480,14 @@ input[type=checkbox] {
 .blog-page header {
   background-image: url(../assets/blog-header.jpg);
   min-height: 70vh;
-  background-size: 1600px auto;
   background-size: cover;
-  position: relative;
 }
 
 .blog-page header h1 {
   position: absolute;
   left: 44%;
-  bottom: 170px;
+  top: 20%;
+  z-index: 10;
 }
 
 .contact-page header {
@@ -487,27 +505,101 @@ input[type=checkbox] {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   height: 70vh;
 }
 
 .contact-page header .header-contact .h1-contact {
-  margin-left: 33%;
-  margin-bottom: 200px;
+  margin-left: 34%;
+  margin-top: 100px;
 }
 
 /* ------------------- MEDIA QUERIES ------------------- */
 /* MAJOR BREAKPOINT 1: small desktop & portrait tablet */
 @media (max-width: 940px) {
+  button.dropdown-menu {
+    display: inherit;
+  }
+  .header-menu {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    background-color: rgba(250, 229, 255, 0.9);
+    height: auto;
+    width: 30vw;
+    top: 15vh;
+    right: -35vw;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .header-menu li {
+    display: block;
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 1px solid #4C0341;
+  }
+  .dropdown-menu:active + .header-menu,
+  .dropdown-menu:focus + .header-menu {
+    right: 0;
+  }
+  .dropdown-menu:active + .header-menu .header-menu li:focus-within a,
+  .dropdown-menu:active + .header-menu .header-menu a:hover,
+  .dropdown-menu:active + .header-menu .header-menu a:active,
+  .dropdown-menu:focus + .header-menu .header-menu li:focus-within a,
+  .dropdown-menu:focus + .header-menu .header-menu a:hover,
+  .dropdown-menu:focus + .header-menu .header-menu a:active {
+    color: #4C0341;
+    border-bottom: none;
+  }
   .home-page header img {
     display: none;
+  }
+  .contact-page header .header-contact .h1-contact {
+    margin: 15vh auto 0 auto;
+    width: 380px;
   }
 }
 
 /* MAJOR BREAKPOINT 2: portrait tablet & landscape phone */
+@media (max-width: 768px) {
+  button.dropdown-menu i.fa-bars {
+    font-size: 4rem;
+  }
+  .h1-main {
+    font-size: 10rem;
+  }
+  .blog-page header h1 {
+    position: static;
+    margin: 15vh auto 0 auto;
+    width: 140px;
+    font-size: 7rem;
+  }
+  .contact-page header .header-contact .h1-contact {
+    font-size: 7rem;
+    width: 328px;
+  }
+}
+
 /* MAJOR BREAKPOINT 3: landscape phone & down */
+@media (max-width: 480px) {
+  button.dropdown-menu i.fa-bars {
+    font-size: 3rem;
+  }
+  .header-menu a {
+    font-size: 1.5rem;
+  }
+  .h1-main {
+    font-size: 8rem;
+  }
+  .blog-page header h1 {
+    font-size: 6rem;
+  }
+  .contact-page header .header-contact .h1-contact {
+    font-size: 6rem;
+    width: 280px;
+  }
+}
+
 .about-section {
   background-color: #FAE5FF;
   padding: 200px 0 180px 0;
@@ -1101,10 +1193,6 @@ button:active {
 /* ------------------- MEDIA QUERIES ------------------- */
 /* MAJOR BREAKPOINT 1: small desktop & portrait tablet */
 @media (max-width: 940px) {
-  .contact-page header .header-contact .h1-contact {
-    margin: 0 auto 275px auto;
-    width: 380px;
-  }
   .main-section {
     padding: 80px 0 110px 0;
     -webkit-box-orient: vertical;
@@ -1373,11 +1461,6 @@ aside ul a:active {
 /* ------------------- MEDIA QUERIES ------------------- */
 /* MAJOR BREAKPOINT 1: small desktop & portrait tablet */
 @media (max-width: 940px) {
-  .blog-page header h1 {
-    position: static;
-    width: 147px;
-    margin: 100px auto 0 auto;
-  }
   .blog-page main .flex-container {
     padding: 80px 0;
     -webkit-box-orient: vertical;
@@ -1467,4 +1550,16 @@ aside ul a:active {
 footer {
   background-color: #882C07;
   text-align: center;
+}
+
+footer a {
+  font-style: italic;
+}
+
+/* ------------------- MEDIA QUERIES ------------------- */
+/* MAJOR BREAKPOINT 3: landscape phone & down */
+@media (max-width: 480px) {
+  footer {
+    font-size: 1.5rem;
+  }
 }

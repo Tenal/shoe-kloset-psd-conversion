@@ -1,4 +1,4 @@
-// BLOG PAGE - MAIN SECTION
+// BLOG PAGE - MAIN SECTION -------------------- 
 
 // general layout styling
 .blog-page main {
@@ -150,15 +150,6 @@ aside {
 /* ------------------- MEDIA QUERIES ------------------- */
 /* MAJOR BREAKPOINT 1: small desktop & portrait tablet */
 @media (max-width: 940px) {
-    // header section
-    .blog-page header {
-        h1 {
-            position: static;
-            width: 147px;
-            margin: 100px auto 0 auto;
-        }
-    }
-
     //main section
     .blog-page main .flex-container {
             padding: 80px 0;
@@ -224,9 +215,6 @@ aside {
         }
     }
 }
-
-
-
 
 /* MAJOR BREAKPOINT 3: landscape phone & down */
 @media (max-width: 480px) {

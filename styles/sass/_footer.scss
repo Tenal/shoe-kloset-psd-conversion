@@ -1,5 +1,16 @@
-// SECTION: GLOBAL STYLING
+// GLOBAL STYLING - FOOTER SECTION --------------------
 footer {
     background-color: $brown;
     text-align: center;
+        a {
+            font-style: italic;
+        }
+}
+
+/* ------------------- MEDIA QUERIES ------------------- */
+/* MAJOR BREAKPOINT 3: landscape phone & down */
+@media (max-width: 480px) {
+    footer {
+        font-size: 1.5rem;
+    }
 }

@@ -21,8 +21,7 @@ nav {
     }
 }
 
-// REVIEW - IS THIS CORRECT OR SHOULD I NEST???
-button,
+form button,
 .find-more,
 .read-more {
     @include body-font(20);
@@ -59,6 +58,7 @@ footer {
     line-height: 6.4rem;
     color: $plum;
     text-shadow: 1px 1px 2px $white;
+    padding: 0 0 20px 0;
 }
 
 .h1-secondary {
@@ -67,6 +67,7 @@ footer {
     color: $plum;
     text-shadow: 1px 1px 2px $white;
     z-index: 10;
+    padding: 0 0 10px 0;
 }
 
 h2 {

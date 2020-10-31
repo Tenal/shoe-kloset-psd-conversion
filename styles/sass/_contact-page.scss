@@ -93,29 +93,24 @@ form.contact-form {
 }
 
 // form input styling 
-input, 
+input,
 textarea {
     padding: 20px 20px 12px 20px;
     background-color: $white;
     border: none;
 }
-
 input {
     border-bottom: 2px solid $orange;
 }
-
 input:focus {
     border-bottom: 2px solid $brown;
 }
-
 textarea {
     border: 2px solid $orange;
 }
-
 textarea:focus {
     border: 2px solid $brown;
 }
-
 input[type=text]::placeholder,
 input[type=email]::placeholder,
 textarea::placeholder {
@@ -138,15 +133,11 @@ button:active {
     background-color: $orange;
 }
 
+
+
 /* ------------------- MEDIA QUERIES ------------------- */
 /* MAJOR BREAKPOINT 1: small desktop & portrait tablet */
 @media (max-width: 940px) {
-    //header section
-    .contact-page header .header-contact .h1-contact {
-        margin: 0 auto 275px auto;
-        width: 380px;
-    }
-
     //main section
     .main-section {
         padding: 80px 0 110px 0;
