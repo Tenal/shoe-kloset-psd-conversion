@@ -345,6 +345,8 @@ footer {
   text-transform: uppercase;
   line-height: 92px;
   color: #4C0341;
+  text-shadow: 1px 1px 2px #FFFFFF;
+  z-index: 10;
 }
 
 h2 {
@@ -461,12 +463,13 @@ input[type=checkbox] {
   min-height: 70vh;
   background-size: 1600px auto;
   background-size: cover;
+  position: relative;
 }
 
 .blog-page header h1 {
   position: absolute;
-  left: 42%;
-  top: 30%;
+  left: 44%;
+  bottom: 170px;
 }
 
 .contact-page header {
@@ -496,7 +499,6 @@ input[type=checkbox] {
 }
 
 /* ------------------- MEDIA QUERIES ------------------- */
-/* MINOR BREAKPOINT 1: updating header text for accessibility/visibility */
 /* MAJOR BREAKPOINT 1: small desktop & portrait tablet */
 @media (max-width: 940px) {
   .home-page header img {
@@ -980,7 +982,7 @@ input[type=checkbox] {
   color: #FE6F19;
 }
 
-form {
+form.contact-form {
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -994,7 +996,7 @@ form {
           box-shadow: -35px 35px #FE6F19;
 }
 
-form .name-and-email {
+form.contact-form .name-and-email {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1003,27 +1005,27 @@ form .name-and-email {
           justify-content: center;
 }
 
-form .name-and-email .name-box,
-form .name-and-email .email-box {
+form.contact-form .name-and-email .name-box,
+form.contact-form .name-and-email .email-box {
   width: calc(100% / 2 - 30px);
   margin: 60px 15px 0 15px;
 }
 
-form .name-and-email .name-box {
+form.contact-form .name-and-email .name-box {
   margin-left: 60px;
 }
 
-form .name-and-email .email-box {
+form.contact-form .name-and-email .email-box {
   margin-right: 60px;
 }
 
-form .message-box textarea {
+form.contact-form .message-box textarea {
   width: calc(100% - 120px);
   resize: none;
   margin: 60px;
 }
 
-form button {
+form.contact-form button {
   margin-bottom: 60px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -1127,37 +1129,32 @@ button:active {
     width: 80%;
     margin-top: 80px;
   }
-  .main-section form .name-and-email {
-    display: block;
-  }
-  .main-section form .name-and-email .name-box,
-  .main-section form .name-and-email .email-box {
-    width: calc(100% - 120px);
-    margin: 40px 60px 0 60px;
+  .main-section .form-container {
+    width: 90%;
   }
 }
 
 /* MAJOR BREAKPOINT 2: portrait tablet & landscape phone */
 @media (max-width: 768px) {
-  .main-section .form-container {
-    width: 90%;
-  }
   .main-section .form-container form {
     -webkit-box-shadow: -20px 20px #FE6F19;
             box-shadow: -20px 20px #FE6F19;
   }
-  .main-section .form-container form .name-box,
-  .main-section .form-container form .email-box {
-    width: calc(100% - 40px);
-    margin: 0 20px;
+  .main-section .form-container form .name-and-email {
+    display: block;
+  }
+  .main-section .form-container form .name-and-email .name-box,
+  .main-section .form-container form .name-and-email .email-box {
+    width: calc(100% - 80px);
+    margin: 10px 40px 0 40px;
   }
   .main-section .form-container form .message-box textarea {
-    width: calc(100% - 40px);
-    margin: 20px;
+    width: calc(100% - 80px);
+    margin: 40px;
   }
   .main-section .form-container form button {
-    width: calc(100% - 40px);
-    margin: 0 20px 20px 20px;
+    width: calc(100% - 80px);
+    margin: 0 40px 40px 40px;
   }
 }
 
@@ -1173,6 +1170,19 @@ button:active {
   .main-section .form-container form {
     -webkit-box-shadow: -10px 10px #FE6F19;
             box-shadow: -10px 10px #FE6F19;
+  }
+  .main-section .form-container form .name-and-email .name-box,
+  .main-section .form-container form .name-and-email .email-box {
+    width: calc(100% - 40px);
+    margin: 0 20px 0 20px;
+  }
+  .main-section .form-container form .message-box textarea {
+    width: calc(100% - 40px);
+    margin: 20px;
+  }
+  .main-section .form-container form button {
+    width: calc(100% - 40px);
+    margin: 0 20px 20px 20px;
   }
 }
 
@@ -1207,11 +1217,10 @@ button:active {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 50px;
           flex: 1 0 50px;
-  max-width: 500px;
   width: calc(37% - 25px - 10%);
   margin: 0 50px 0 5vw;
   background-color: #FFFFFF;
-  max-width: 380px;
+  max-width: 500px;
 }
 
 article {
@@ -1228,7 +1237,7 @@ article .image-container img {
   position: absolute;
   bottom: -250px;
   left: 30px;
-  width: 98%;
+  width: calc(100% - 30px);
   max-width: 800px;
 }
 
@@ -1282,61 +1291,67 @@ article .text-container .date-paragraph {
   margin-bottom: 5px;
 }
 
-.blog-form {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  background-color: #FAE5FF;
+.comments div.bottom-text {
+  margin-bottom: 60px;
 }
 
-.blog-form .name-box {
+form.blog-form .name-and-email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+form.blog-form .name-and-email .name-box {
   margin: 0 30px 0 0;
   width: calc(100% / 2 - 15px);
 }
 
-.blog-form .email-box {
+form.blog-form .name-and-email .email-box {
   margin: 0;
   width: calc(100% / 2 - 15px);
 }
 
-.blog-form .name-box input,
-.blog-form .email-box input {
+form.blog-form .name-and-email .name-box input,
+form.blog-form .name-and-email .email-box input {
   background-color: #FAE5FF;
 }
 
-.blog-form .message-box textarea {
+form.blog-form .message-box textarea {
   margin: 30px 0 30px 0;
   width: 100%;
   background-color: #FAE5FF;
 }
 
-.blog-form button {
+form.blog-form button {
   background-color: #4C0341;
   width: 100%;
   margin: 0;
 }
 
-.blog-form button:hover,
-.blog-form button:focus,
-.blog-form button:active {
+form.blog-form button:hover,
+form.blog-form button:focus,
+form.blog-form button:active {
   background-color: #FE6F19;
 }
 
 aside {
-  padding: 330px 15px 30px 15px;
-  max-width: 350px;
-  position: relative;
+  padding: 0 15px 30px 15px;
 }
 
 aside img {
-  position: absolute;
+  position: relative;
   top: -20px;
-  left: -65px;
-  width: 120%;
-  max-width: 120%;
+  left: -85px;
+  width: 125%;
+  max-width: 125%;
 }
 
 aside h3 {
   margin: 40px 0 10px 0;
+}
+
+aside h3.top-heading {
+  margin-top: 20px;
 }
 
 aside ul {
@@ -1354,6 +1369,53 @@ aside ul a:active {
   border-bottom: 2px solid #FE6F19;
 }
 
+/* ------------------- MEDIA QUERIES ------------------- */
+/* MAJOR BREAKPOINT 1: small desktop & portrait tablet */
+@media (max-width: 940px) {
+  .blog-page header h1 {
+    position: static;
+    width: 147px;
+    margin: 100px auto 0 auto;
+  }
+  .blog-page main .flex-container {
+    padding: 80px 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .blog-page main .flex-container .flex-right {
+    width: 90%;
+  }
+  .blog-page main .flex-container .flex-left {
+    width: 90%;
+    margin: 0;
+  }
+  article .image-container img {
+    max-width: 800px;
+    width: calc(100% - 30px);
+  }
+  article .text-container {
+    padding-right: 40px;
+  }
+  section.comments-and-form {
+    padding-right: 0;
+  }
+  section.comments-and-form form {
+    margin-bottom: 80px;
+  }
+  aside img {
+    position: static;
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+
+/* MAJOR BREAKPOINT 2: portrait tablet & landscape phone */
+/* MAJOR BREAKPOINT 3: landscape phone & down */
 footer {
   background-color: #882C07;
   text-align: center;

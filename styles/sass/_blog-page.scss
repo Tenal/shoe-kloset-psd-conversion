@@ -1,9 +1,6 @@
-//NOTE: check how many levels you can indent in
-// NOTE: change some divs to sections
+// BLOG PAGE - MAIN SECTION
 
-
-
-// main section
+// general layout styling
 .blog-page main {
     background-color: $mauve;
         .flex-container {
@@ -14,21 +11,18 @@
             align-items: flex-start;
             max-width: 1280px;
             margin: 0 auto;
-            // NOTE: see if ABOVE WORKS
                 .flex-right {
                     width: calc(63% - 25px);
                 }
                 .flex-left {
                     flex: 1 0 50px;
-                    max-width: 500px;
                     width: calc(37% - 25px - 10%);
                     margin: 0 50px 0 5vw;
                     background-color: $white;
-                    max-width: 380px;
+                    max-width: 500px;
                 }
         }
 }
-
 
 // article section
 article {
@@ -40,7 +34,7 @@ article {
                 position: absolute;
                 bottom: -250px;
                 left: 30px;
-                width: 98%;
+                width: calc(100% - 30px);
                 max-width: 800px;
             }
     }
@@ -57,9 +51,6 @@ article {
             }
     }
 }
-
-
-
 
 // blog comments section
 .comments-and-form {
@@ -86,35 +77,32 @@ article {
                     margin-bottom: 5px;
                 }
         }
+        div.bottom-text {
+            margin-bottom: 60px;
+        }
 }
 
-
-
-
 // form section
-.blog-form {
-    box-shadow: none;
-    background-color: $mauve;
-        .name-box {
-            margin: 0 30px 0 0;
-            width: calc(100% / 2 - 15px);
-        }
-        .email-box {
-            margin: 0;
-            width: calc(100% / 2 - 15px);
-        }
-        .name-box,
-        .email-box {
-            input {
+form.blog-form {
+    .name-and-email {
+        display: flex;
+            .name-box {
+                margin: 0 30px 0 0;
+                width: calc(100% / 2 - 15px);
+            }
+            .email-box {
+                margin: 0;
+                width: calc(100% / 2 - 15px);
+            }
+            .name-box input,
+            .email-box input {
                 background-color: $mauve;
             }
-        }
-        .message-box {
-            textarea {
-                margin: 30px 0 30px 0;
-                width: 100%;
-                background-color: $mauve;
-            }
+    }
+        .message-box textarea {
+            margin: 30px 0 30px 0;
+            width: 100%;
+            background-color: $mauve;
         }
         button {
             background-color: $plum;
@@ -128,24 +116,22 @@ article {
         }
     }
 
-
-
-
 // aside section
 aside {
-    padding: 330px 15px 30px 15px;
-    max-width: 350px;
-    position: relative;
+    padding: 0 15px 30px 15px;
         img {
-            position: absolute;
+            position: relative;
             top: -20px;
-            left: -65px;
-            width: 120%;
-            max-width: 120%;
+            left: -85px;
+            width: 125%;
+            max-width: 125%;
         }
         h3 {
             margin: 40px 0 10px 0;
         } 
+        h3.top-heading {
+            margin-top: 20px;
+        }
         ul {
             list-style: disc;
             padding-left: 20px;
@@ -158,4 +144,67 @@ aside {
                     border-bottom: 2px solid $orange;
                 }
         }
+}
+
+/* ------------------- MEDIA QUERIES ------------------- */
+/* MAJOR BREAKPOINT 1: small desktop & portrait tablet */
+@media (max-width: 940px) {
+    // header section
+    .blog-page header {
+        h1 {
+            position: static;
+            width: 147px;
+            margin: 100px auto 0 auto;
+        }
+    }
+
+    //main section
+    .blog-page main .flex-container {
+            padding: 80px 0;
+            flex-direction: column;
+            align-items: center;
+                .flex-right {
+                    width: 90%;
+                }
+                .flex-left {
+                    width: 90%;
+                    margin: 0;
+                }
+    }
+
+    // article section
+    article {
+        .image-container img {
+            max-width: 800px;
+            width: calc(100% - 30px);
+        }
+        .text-container {
+            padding-right: 40px;
+        }
+    }
+
+    // comments section
+    section.comments-and-form {
+        padding-right: 0; 
+            form {
+                margin-bottom: 80px;
+            }
+    }
+
+    // aside section
+    aside img {
+        position: static;
+        width: 100%; 
+        margin-top: 15px;
+    }
+}
+
+/* MAJOR BREAKPOINT 2: portrait tablet & landscape phone */
+@media (max-width: 768px) {
+
+}
+
+/* MAJOR BREAKPOINT 3: landscape phone & down */
+@media (max-width: 480px) {
+
 }

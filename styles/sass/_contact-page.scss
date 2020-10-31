@@ -1,4 +1,4 @@
-// CONTACT PAGE - SECTION: MAIN
+// CONTACT PAGE - MAIN SECTION
 
 // general layout & address container styling
 .main-contact {
@@ -52,7 +52,7 @@
 }
 
 // form styling
-form {
+form.contact-form {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -141,12 +141,13 @@ button:active {
 /* ------------------- MEDIA QUERIES ------------------- */
 /* MAJOR BREAKPOINT 1: small desktop & portrait tablet */
 @media (max-width: 940px) {
-    // CONTACT US MAIN SECTION
+    //header section
     .contact-page header .header-contact .h1-contact {
         margin: 0 auto 275px auto;
         width: 380px;
     }
 
+    //main section
     .main-section {
         padding: 80px 0 110px 0;
         flex-direction: column;
@@ -165,28 +166,53 @@ button:active {
             }
     }
 
-    .main-section form {
-        .name-and-email {
-            display: block;
-                .name-box, 
-                .email-box {
-                    width: calc(100% - 120px);
-                    margin: 40px 60px 0 60px;
-                }
-        }
+    // form section
+    .main-section .form-container {
+        width: 90%;
     }
 }
 
 /* MAJOR BREAKPOINT 2: portrait tablet & landscape phone */
 @media (max-width: 768px) {
-    .main-section .form-container {
-        width: 90%;
-            form {
-                box-shadow: -20px 20px $orange;
+    //form section
+    .main-section .form-container form {
+        box-shadow: -20px 20px $orange;
+            .name-and-email {
+                display: block;
                     .name-box, 
                     .email-box {
+                        width: calc(100% - 80px);
+                        margin: 10px 40px 0 40px;
+                    }
+            }
+            .message-box textarea {
+                width: calc(100% - 80px);
+                margin: 40px;
+            }
+            button {
+                width: calc(100% - 80px);
+                margin: 0 40px 40px 40px;
+            }
+    }
+}
+
+/* MAJOR BREAKPOINT 3: landscape phone & down */
+@media (max-width: 480px) {
+    //main section
+    .main-section {
+        padding: 60px 0 70px 0;
+    }
+    
+    //form section
+    .main-section .form-container {
+        width: 100%;
+        margin-top: 60px;
+            form {
+                box-shadow: -10px 10px $orange;
+                    .name-and-email .name-box, 
+                    .name-and-email .email-box {
                         width: calc(100% - 40px);
-                        margin: 0 20px;
+                        margin: 0 20px 0 20px;
                     }
                     .message-box textarea {
                         width: calc(100% - 40px);
@@ -198,20 +224,4 @@ button:active {
                     }
             }
     }
-}
-
-/* MAJOR BREAKPOINT 3: landscape phone & down */
-@media (max-width: 480px) {
-    .main-section {
-        padding: 60px 0 70px 0;
-            .form-container {
-                width: 100%;
-                margin-top: 60px;
-                    form {
-                        box-shadow: -10px 10px $orange;
-                    }
-            }
-    }
-    
-    
 }

@@ -65,13 +65,12 @@ input[type=checkbox] {
     min-height: 70vh;
     background-size: 1600px auto;
     background-size: cover;
-    // background-position: 0% 0%;
+    position: relative;
         h1 {
             position: absolute;
-            left: 42%;
-            top: 30%;
+            left: 44%;
+            bottom: 170px;
         }
-
 }
 
 // SECTION: CONTACT PAGE STYLING --------------------
@@ -97,17 +96,6 @@ input[type=checkbox] {
 
 
 /* ------------------- MEDIA QUERIES ------------------- */
-
-/* MINOR BREAKPOINT 1: updating header text for accessibility/visibility */
-// @media (max-width: 1380px) {
-//     .home-page header {
-//         h1,
-//         nav {
-//             text-shadow: 1px 1px 2px $white;
-//         }
-//     }
-// }
-
 /* MAJOR BREAKPOINT 1: small desktop & portrait tablet */
 @media (max-width: 940px) {
     // MAKE NAV HAM MENU APPEAR
