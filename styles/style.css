@@ -532,16 +532,16 @@ input[type=checkbox] {
     text-align: center;
     border-bottom: 1px solid #FFFFFF;
   }
-  .header-menu li li:focus-within a,
-  .header-menu li li:hover a,
-  .header-menu li li:focus a,
-  .header-menu li li:active a {
+  .header-menu li a {
+    text-shadow: none;
+  }
+  .header-menu li:focus-within a,
+  .header-menu li:hover a,
+  .header-menu li:focus a,
+  .header-menu li:active a {
     color: #FE6F19;
     border-bottom: none;
     background-color: transparent;
-  }
-  .header-menu li a {
-    text-shadow: none;
   }
   input[type=checkbox]:checked + .header-menu {
     left: 0;
@@ -762,12 +762,6 @@ input[type=checkbox] {
   margin: 0 auto;
 }
 
-.icons-section a a:hover i,
-.icons-section a a:focus i,
-.icons-section a a:active i {
-  background-color: #FE6F19;
-}
-
 .icons-section a i {
   font-size: 2.7rem;
   color: #FFFFFF;
@@ -778,6 +772,12 @@ input[type=checkbox] {
   padding: 10px;
   margin: 0 20px;
   border-radius: 50%;
+}
+
+.icons-section a:hover i,
+.icons-section a:focus i,
+.icons-section a:active i {
+  background-color: #FE6F19;
 }
 
 .popular-section {
@@ -1189,9 +1189,9 @@ button {
   width: calc(100% - 120px);
 }
 
-button button:hover,
-button button:focus,
-button button:active {
+button:hover,
+button:focus,
+button:active {
   background-color: #FE6F19;
 }
 

@@ -112,18 +112,21 @@ input[type=checkbox] {
                 padding: 20px 0;
                 text-align: center;
                 border-bottom: 1px solid $white;
-                    li:focus-within a,
-                    li:hover a,
-                    li:focus a,
-                    li:active a {
-                        color: $orange;
-                        border-bottom: none;
-                        background-color: transparent;
-                    }
                     a {
                         text-shadow: none;
                     }
             }
+    }
+
+    .header-menu {
+        li:focus-within a,
+        li:hover a,
+        li:focus a,
+        li:active a {
+            color: $orange;
+            border-bottom: none;
+            background-color: transparent;
+        }
     }
 
     input[type=checkbox]:checked + .header-menu {
