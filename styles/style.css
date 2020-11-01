@@ -271,19 +271,6 @@ img {
   margin: 0 auto;
 }
 
-.skip-link {
-  position: absolute;
-  left: -1000px;
-  top: 5px;
-  z-index: 999;
-  background: white;
-  color: black;
-}
-
-.skip-link:focus {
-  left: 0;
-}
-
 body,
 input {
   font-size: 2rem;
@@ -340,6 +327,19 @@ footer {
   font-family: 'Lato', sans-serif;
   line-height: 3.2rem;
   color: #FFFFFF;
+}
+
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: #FAE5FF;
+  color: #4C0341;
+}
+
+.skip-link:focus {
+  left: 0;
 }
 
 .h1-main {
@@ -508,6 +508,9 @@ input[type=checkbox] {
   i.fa-bars {
     display: inherit;
   }
+  i.fa-bars:focus, i.fa-bars:active {
+    color: #FE6F19;
+  }
   .header-menu {
     position: fixed;
     display: block;
@@ -528,17 +531,19 @@ input[type=checkbox] {
     text-align: center;
     border-bottom: 1px solid #FFFFFF;
   }
+  .header-menu li:focus-within a,
+  .header-menu li:hover a,
+  .header-menu li:focus a,
+  .header-menu li:active a {
+    color: #FE6F19;
+    border-bottom: none;
+    background-color: transparent;
+  }
   .header-menu li a {
     text-shadow: none;
   }
   input[type=checkbox]:checked + .header-menu {
     left: 0;
-  }
-  .header-menu li:focus-within a,
-  .header-menu a:hover,
-  .header-menu a:active {
-    color: #FE6F19;
-    border-bottom: none;
   }
   .home-page header img {
     display: none;
@@ -756,6 +761,12 @@ input[type=checkbox] {
   margin: 0 auto;
 }
 
+.icons-section a:hover i,
+.icons-section a:focus i,
+.icons-section a:active i {
+  background-color: #FE6F19;
+}
+
 .icons-section a i {
   font-size: 2.7rem;
   color: #FFFFFF;
@@ -766,12 +777,6 @@ input[type=checkbox] {
   padding: 10px;
   margin: 0 20px;
   border-radius: 50%;
-}
-
-.icons-section a:hover i,
-.icons-section a:focus i,
-.icons-section a:active i {
-  background-color: #FE6F19;
 }
 
 .popular-section {
@@ -1183,9 +1188,7 @@ button {
   width: calc(100% - 120px);
 }
 
-button:hover,
-button:focus,
-button:active {
+button:hover, button:focus, button:active {
   background-color: #FE6F19;
 }
 

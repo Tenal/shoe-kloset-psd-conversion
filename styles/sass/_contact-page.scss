@@ -73,18 +73,21 @@ textarea {
     background-color: $white;
     border: none;
 }
+
 input {
     border-bottom: 2px solid $orange;
+        &:focus {
+            border-bottom: 2px solid $brown;
+        }
 }
-input:focus {
-    border-bottom: 2px solid $brown;
-}
+
 textarea {
     border: 2px solid $orange;
+        &:focus {
+            border: 2px solid $brown;
+        }
 }
-textarea:focus {
-    border: 2px solid $brown;
-}
+
 input[type=text]::placeholder,
 input[type=email]::placeholder,
 textarea::placeholder {
@@ -99,12 +102,11 @@ button {
     padding: 5px 0;
     margin: 0 60px;
     width: calc(100% - 120px);
-}
-
-button:hover,
-button:focus,
-button:active {
-    background-color: $orange;
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $orange;
+        }
 }
 
 // ADDRESS SECTION --------------------

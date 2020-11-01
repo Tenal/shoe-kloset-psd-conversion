@@ -119,6 +119,11 @@
 
 .icons-section {
     a {
+        &:hover i,
+        &:focus i,
+        &:active i {
+            background-color: $orange;
+        }
         i {
             font-size: 2.7rem;
             color: $white;
@@ -131,11 +136,6 @@
             border-radius: 50%;
         }
     }    
-    a:hover i,
-    a:focus i,
-    a:active i {
-        background-color: $orange;
-    }
 }
 
 // POPULAR THIS MONTH SECTION --------------------

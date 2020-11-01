@@ -1,6 +1,6 @@
 // GLOBAL STYLING - typography --------------------
 
-// body, nav, button, and logo styling
+// body, nav, button, logo, skip link styling
 body,
 input {
     @include body-font(20);
@@ -46,6 +46,19 @@ footer {
     @include body-font(20);
     line-height: 3.2rem;
     color: $white;
+}
+
+.skip-link {
+    position: absolute;
+    left: -1000px;
+    top: 5px;
+    z-index: 999;
+    background: $mauve;
+    color: $plum;
+}
+
+.skip-link:focus {
+    left: 0;
 }
 
 // heading styling
