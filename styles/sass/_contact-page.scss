@@ -76,14 +76,14 @@ textarea {
 
 input {
     border-bottom: 2px solid $orange;
-        &:focus {
+        input:focus {
             border-bottom: 2px solid $brown;
         }
 }
 
 textarea {
     border: 2px solid $orange;
-        &:focus {
+        textarea:focus {
             border: 2px solid $brown;
         }
 }
@@ -102,9 +102,9 @@ button {
     padding: 5px 0;
     margin: 0 60px;
     width: calc(100% - 120px);
-        &:hover,
-        &:focus,
-        &:active {
+        button:hover,
+        button:focus,
+        button:active {
             background-color: $orange;
         }
 }

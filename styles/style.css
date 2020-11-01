@@ -761,9 +761,9 @@ input[type=checkbox] {
   margin: 0 auto;
 }
 
-.icons-section a:hover i,
-.icons-section a:focus i,
-.icons-section a:active i {
+.icons-section a a:hover i,
+.icons-section a a:focus i,
+.icons-section a a:active i {
   background-color: #FE6F19;
 }
 
@@ -1143,7 +1143,7 @@ input {
   border-bottom: 2px solid #FE6F19;
 }
 
-input:focus {
+input input:focus {
   border-bottom: 2px solid #882C07;
 }
 
@@ -1151,7 +1151,7 @@ textarea {
   border: 2px solid #FE6F19;
 }
 
-textarea:focus {
+textarea textarea:focus {
   border: 2px solid #882C07;
 }
 
@@ -1188,7 +1188,9 @@ button {
   width: calc(100% - 120px);
 }
 
-button:hover, button:focus, button:active {
+button button:hover,
+button button:focus,
+button button:active {
   background-color: #FE6F19;
 }
 

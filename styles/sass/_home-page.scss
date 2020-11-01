@@ -119,9 +119,9 @@
 
 .icons-section {
     a {
-        &:hover i,
-        &:focus i,
-        &:active i {
+        a:hover i,
+        a:focus i,
+        a:active i {
             background-color: $orange;
         }
         i {
