@@ -7,6 +7,7 @@
 
 .main-section {
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
         .address-container {
             width: 30%;
@@ -16,10 +17,10 @@
                     margin: 20px 0;
                 }
         }
-        .form-container {
+        .h1-and-form-container {
             width: 70%;
             position: relative;
-            bottom: 200px;
+            bottom: 270px;
             left: 30px;
         }
 }
@@ -138,33 +139,44 @@ button:active {
 @media (max-width: 940px) {
     //main section
     .main-section {
-        padding: 80px 0 110px 0;
+        padding: 20px 0 80px 0;
         flex-direction: column;
         align-items: center;
             .address-container {
                 width: 100%;
                 text-align: center;
+                margin: 110px 0 0 0;
                     .social-icons ul {
                         justify-content: center;
                     }
             }
-            .form-container {
+            .h1-and-form-container {
                 position: static;
                 width: 80%;
-                margin-top: 80px;
+            }
+            .h1-and-form-container h1 {
+                text-align: center;
             }
     }
 
     // form section
-    .main-section .form-container {
+    .main-section .h1-and-form-container {
         width: 90%;
+            form {
+                margin-top: 40px;
+            }
     }
 }
 
 /* MAJOR BREAKPOINT 2: portrait tablet & landscape phone */
 @media (max-width: 768px) {
+    // main section 
+    .main-section .h1-and-form-container h1 {
+        font-size: 7rem;
+    }
+
     //form section
-    .main-section .form-container form {
+    .main-section .h1-and-form-container form {
         box-shadow: -20px 20px $orange;
             .name-and-email {
                 display: block;
@@ -189,13 +201,18 @@ button:active {
 @media (max-width: 480px) {
     //main section
     .main-section {
-        padding: 60px 0 70px 0;
+        padding: 10px 0 60px 0;
+            .h1-and-form-container h1 {
+                font-size: 6rem;
+            }
+            .address-container {
+                margin-top: 70px;
+            }
     }
-    
+
     //form section
-    .main-section .form-container {
+    .main-section .h1-and-form-container {
         width: 100%;
-        margin-top: 60px;
             form {
                 box-shadow: -10px 10px $orange;
                     .name-and-email .name-box, 

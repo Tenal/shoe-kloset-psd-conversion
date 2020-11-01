@@ -78,12 +78,6 @@ button.dropdown-menu {
     background-image: url(../assets/blog-header.jpg);
     min-height: 70vh;
     background-size: cover;
-        h1 {
-            position: absolute;
-            left: 44%;
-            top: 25%;
-            z-index: 10;
-        }
 }
 
 // CONTACT PAGE - HEADER SECTION --------------------
@@ -92,15 +86,6 @@ button.dropdown-menu {
     background-position: left bottom;
     background-size: cover;
     min-height: 70vh;
-        .header-contact {
-            display: flex;
-            flex-direction: column;
-            height: 70vh;
-                .h1-contact {
-                    margin-left: 34%;
-                    margin-top: 50px;
-                }
-        }
 }
 
 /* ------------------- MEDIA QUERIES ------------------- */
@@ -148,10 +133,14 @@ button.dropdown-menu {
         }
     }
 
+    // BLOG PAGE header 
+    .blog-page header {
+        min-height: 40vh;
+    }
+
     // CONTACT PAGE header 
-    .contact-page header .header-contact .h1-contact {
-        margin: 15vh auto 0 auto;
-        width: 380px;
+    .contact-page header {
+        min-height: 40vh;
     }
 }
 
@@ -165,22 +154,6 @@ button.dropdown-menu {
     // HOME PAGE header 
     .h1-main {
         font-size: 10rem;
-    }
-
-    // BLOG PAGE header 
-    .blog-page header {
-        h1 {
-            position: static;
-            margin: 15vh auto 0 auto;
-            width: 140px;
-            font-size: 7rem;
-        }
-    }
-
-    // CONTACT PAGE header 
-    .contact-page header .header-contact .h1-contact {
-        font-size: 7rem;
-        width: 328px;
     }
 }
 
@@ -198,16 +171,5 @@ button.dropdown-menu {
     // HOME PAGE header 
     .h1-main {
         font-size: 8rem;
-    }
-
-    // BLOG PAGE header 
-    .blog-page header h1 {
-        font-size: 6rem;
-    }
-
-    // CONTACT PAGE header 
-    .contact-page header .header-contact .h1-contact {
-        font-size: 6rem;
-        width: 280px;
     }
 }

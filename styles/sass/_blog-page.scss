@@ -29,12 +29,14 @@ article {
     width: 100%;
     .image-container {
         position: relative;
+            .h1-and-image {
+                position: absolute;
+                left: 30px;
+                top: -350px;
+            }
             img {
                 box-shadow: -30px 30px $orange;
-                position: absolute;
-                bottom: -250px;
-                left: 30px;
-                width: calc(100% - 30px);
+                width: 100%;
                 max-width: 800px;
             }
     }
@@ -152,7 +154,7 @@ aside {
 @media (max-width: 940px) {
     //main section
     .blog-page main .flex-container {
-            padding: 80px 0;
+            padding: 20px 0 80px 0;
             flex-direction: column;
             align-items: center;
                 .flex-right {
@@ -166,12 +168,20 @@ aside {
 
     // article section
     article {
-        .image-container img {
-            max-width: 800px;
-            width: calc(100% - 30px);
+        .image-container {
+            .h1-and-image {
+                position: static;
+                text-align: center;
+            }
+            img {
+                max-width: 800px;
+                box-shadow: none;
+                position: static;
+                margin-top: 40px;
+            }
         }
         .text-container {
-            padding-right: 40px;
+            padding: 40px;
         }
     }
 
@@ -193,11 +203,9 @@ aside {
 
 /* MAJOR BREAKPOINT 2: portrait tablet & landscape phone */
 @media (max-width: 768px) {
-    // article section
-    .flex-container article img {
-        box-shadow: -20px 20px $orange;
-        width: calc(100% - 20px);
-        left: 20px;
+    // main section
+    .h1-and-image .h1-secondary {
+        font-size: 7rem;
     }
     
     //form section
@@ -220,18 +228,7 @@ aside {
 @media (max-width: 480px) {
     //main section
     .blog-page main .flex-container {
-        padding: 60px 0;
-            article {
-                .image-container img {
-                    box-shadow: -10px 10px $orange;
-                    width: calc(100% - 10px);
-                    left: 10px;
-                    top: 0px;
-                }
-                .text-container {
-                    padding-top: 80%;
-                }
-            }
+        padding: 10px 0 60px 0;
             .comments-and-form .blog-form {
                 margin-bottom: 60px;
             }

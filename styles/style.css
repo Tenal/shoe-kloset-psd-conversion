@@ -497,34 +497,11 @@ button.dropdown-menu i.fa-bars {
   background-size: cover;
 }
 
-.blog-page header h1 {
-  position: absolute;
-  left: 44%;
-  top: 25%;
-  z-index: 10;
-}
-
 .contact-page header {
   background-image: url(../assets/contact-image.jpg);
   background-position: left bottom;
   background-size: cover;
   min-height: 70vh;
-}
-
-.contact-page header .header-contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 70vh;
-}
-
-.contact-page header .header-contact .h1-contact {
-  margin-left: 34%;
-  margin-top: 50px;
 }
 
 /* ------------------- MEDIA QUERIES ------------------- */
@@ -568,9 +545,11 @@ button.dropdown-menu i.fa-bars {
   .home-page header img {
     display: none;
   }
-  .contact-page header .header-contact .h1-contact {
-    margin: 15vh auto 0 auto;
-    width: 380px;
+  .blog-page header {
+    min-height: 40vh;
+  }
+  .contact-page header {
+    min-height: 40vh;
   }
 }
 
@@ -581,16 +560,6 @@ button.dropdown-menu i.fa-bars {
   }
   .h1-main {
     font-size: 10rem;
-  }
-  .blog-page header h1 {
-    position: static;
-    margin: 15vh auto 0 auto;
-    width: 140px;
-    font-size: 7rem;
-  }
-  .contact-page header .header-contact .h1-contact {
-    font-size: 7rem;
-    width: 328px;
   }
 }
 
@@ -604,13 +573,6 @@ button.dropdown-menu i.fa-bars {
   }
   .h1-main {
     font-size: 8rem;
-  }
-  .blog-page header h1 {
-    font-size: 6rem;
-  }
-  .contact-page header .header-contact .h1-contact {
-    font-size: 6rem;
-    width: 280px;
   }
 }
 
@@ -1040,6 +1002,10 @@ button.dropdown-menu i.fa-bars {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1057,10 +1023,10 @@ button.dropdown-menu i.fa-bars {
   margin: 20px 0;
 }
 
-.main-section .form-container {
+.main-section .h1-and-form-container {
   width: 70%;
   position: relative;
-  bottom: 200px;
+  bottom: 270px;
   left: 30px;
 }
 
@@ -1208,7 +1174,7 @@ button:active {
 /* MAJOR BREAKPOINT 1: small desktop & portrait tablet */
 @media (max-width: 940px) {
   .main-section {
-    padding: 80px 0 110px 0;
+    padding: 20px 0 80px 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1220,41 +1186,50 @@ button:active {
   .main-section .address-container {
     width: 100%;
     text-align: center;
+    margin: 110px 0 0 0;
   }
   .main-section .address-container .social-icons ul {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .main-section .form-container {
+  .main-section .h1-and-form-container {
     position: static;
     width: 80%;
-    margin-top: 80px;
   }
-  .main-section .form-container {
+  .main-section .h1-and-form-container h1 {
+    text-align: center;
+  }
+  .main-section .h1-and-form-container {
     width: 90%;
+  }
+  .main-section .h1-and-form-container form {
+    margin-top: 40px;
   }
 }
 
 /* MAJOR BREAKPOINT 2: portrait tablet & landscape phone */
 @media (max-width: 768px) {
-  .main-section .form-container form {
+  .main-section .h1-and-form-container h1 {
+    font-size: 7rem;
+  }
+  .main-section .h1-and-form-container form {
     -webkit-box-shadow: -20px 20px #FE6F19;
             box-shadow: -20px 20px #FE6F19;
   }
-  .main-section .form-container form .name-and-email {
+  .main-section .h1-and-form-container form .name-and-email {
     display: block;
   }
-  .main-section .form-container form .name-and-email .name-box,
-  .main-section .form-container form .name-and-email .email-box {
+  .main-section .h1-and-form-container form .name-and-email .name-box,
+  .main-section .h1-and-form-container form .name-and-email .email-box {
     width: calc(100% - 80px);
     margin: 10px 40px 0 40px;
   }
-  .main-section .form-container form .message-box textarea {
+  .main-section .h1-and-form-container form .message-box textarea {
     width: calc(100% - 80px);
     margin: 40px;
   }
-  .main-section .form-container form button {
+  .main-section .h1-and-form-container form button {
     width: calc(100% - 80px);
     margin: 0 40px 40px 40px;
   }
@@ -1263,26 +1238,31 @@ button:active {
 /* MAJOR BREAKPOINT 3: landscape phone & down */
 @media (max-width: 480px) {
   .main-section {
-    padding: 60px 0 70px 0;
+    padding: 10px 0 60px 0;
   }
-  .main-section .form-container {
+  .main-section .h1-and-form-container h1 {
+    font-size: 6rem;
+  }
+  .main-section .address-container {
+    margin-top: 70px;
+  }
+  .main-section .h1-and-form-container {
     width: 100%;
-    margin-top: 60px;
   }
-  .main-section .form-container form {
+  .main-section .h1-and-form-container form {
     -webkit-box-shadow: -10px 10px #FE6F19;
             box-shadow: -10px 10px #FE6F19;
   }
-  .main-section .form-container form .name-and-email .name-box,
-  .main-section .form-container form .name-and-email .email-box {
+  .main-section .h1-and-form-container form .name-and-email .name-box,
+  .main-section .h1-and-form-container form .name-and-email .email-box {
     width: calc(100% - 40px);
     margin: 0 20px 0 20px;
   }
-  .main-section .form-container form .message-box textarea {
+  .main-section .h1-and-form-container form .message-box textarea {
     width: calc(100% - 40px);
     margin: 20px;
   }
-  .main-section .form-container form button {
+  .main-section .h1-and-form-container form button {
     width: calc(100% - 40px);
     margin: 0 20px 20px 20px;
   }
@@ -1333,13 +1313,16 @@ article .image-container {
   position: relative;
 }
 
+article .image-container .h1-and-image {
+  position: absolute;
+  left: 30px;
+  top: -350px;
+}
+
 article .image-container img {
   -webkit-box-shadow: -30px 30px #FE6F19;
           box-shadow: -30px 30px #FE6F19;
-  position: absolute;
-  bottom: -250px;
-  left: 30px;
-  width: calc(100% - 30px);
+  width: 100%;
   max-width: 800px;
 }
 
@@ -1476,7 +1459,7 @@ aside ul a:active {
 /* MAJOR BREAKPOINT 1: small desktop & portrait tablet */
 @media (max-width: 940px) {
   .blog-page main .flex-container {
-    padding: 80px 0;
+    padding: 20px 0 80px 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1492,12 +1475,19 @@ aside ul a:active {
     width: 90%;
     margin: 0;
   }
+  article .image-container .h1-and-image {
+    position: static;
+    text-align: center;
+  }
   article .image-container img {
     max-width: 800px;
-    width: calc(100% - 30px);
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    position: static;
+    margin-top: 40px;
   }
   article .text-container {
-    padding-right: 40px;
+    padding: 40px;
   }
   section.comments-and-form {
     padding-right: 0;
@@ -1514,11 +1504,8 @@ aside ul a:active {
 
 /* MAJOR BREAKPOINT 2: portrait tablet & landscape phone */
 @media (max-width: 768px) {
-  .flex-container article img {
-    -webkit-box-shadow: -20px 20px #FE6F19;
-            box-shadow: -20px 20px #FE6F19;
-    width: calc(100% - 20px);
-    left: 20px;
+  .h1-and-image .h1-secondary {
+    font-size: 7rem;
   }
   form.blog-form .name-and-email {
     display: block;
@@ -1536,17 +1523,7 @@ aside ul a:active {
 /* MAJOR BREAKPOINT 3: landscape phone & down */
 @media (max-width: 480px) {
   .blog-page main .flex-container {
-    padding: 60px 0;
-  }
-  .blog-page main .flex-container article .image-container img {
-    -webkit-box-shadow: -10px 10px #FE6F19;
-            box-shadow: -10px 10px #FE6F19;
-    width: calc(100% - 10px);
-    left: 10px;
-    top: 0px;
-  }
-  .blog-page main .flex-container article .text-container {
-    padding-top: 80%;
+    padding: 10px 0 60px 0;
   }
   .blog-page main .flex-container .comments-and-form .blog-form {
     margin-bottom: 60px;
