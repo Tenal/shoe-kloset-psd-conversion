@@ -21,6 +21,8 @@ nav {
     text-transform: initial;
     line-height: 36px;
     letter-spacing: 1.1px;
+    text-shadow: 1px 1px 2px $white;
+    padding: 0 0 10px 0;
 }
 
 .address-container {
@@ -60,9 +62,9 @@ footer {
     @include heading-font(80);
     line-height: 92px;
     color: $plum;
-    text-shadow: 1px 1px 2px $white;
+    text-shadow: 2px 2px 2px $white;
     z-index: 10;
-    padding: 0 0 10px 0;
+    padding: 0 0 20px 0;
 }
 
 h2 {
@@ -71,9 +73,11 @@ h2 {
     color: $plum;
 }
 
-.about-us h2,
+.about-section h2,
 .popular-this-month h2 {
     letter-spacing: 1.2px;
+    position: relative;
+    z-index: 30;
 }
 
 .icons-section h2 {

@@ -310,6 +310,8 @@ nav a {
   text-transform: initial;
   line-height: 36px;
   letter-spacing: 1.1px;
+  text-shadow: 1px 1px 2px #FFFFFF;
+  padding: 0 0 10px 0;
 }
 
 .address-container div p:first-child {
@@ -359,9 +361,9 @@ footer {
   text-transform: uppercase;
   line-height: 92px;
   color: #4C0341;
-  text-shadow: 1px 1px 2px #FFFFFF;
+  text-shadow: 2px 2px 2px #FFFFFF;
   z-index: 10;
-  padding: 0 0 10px 0;
+  padding: 0 0 20px 0;
 }
 
 h2 {
@@ -373,9 +375,11 @@ h2 {
   color: #4C0341;
 }
 
-.about-us h2,
+.about-section h2,
 .popular-this-month h2 {
   letter-spacing: 1.2px;
+  position: relative;
+  z-index: 30;
 }
 
 .icons-section h2 {
@@ -407,8 +411,8 @@ h2 {
 }
 
 header {
-  background-attachment: fixed;
   background-repeat: no-repeat;
+  background-size: cover;
   padding-top: 30px;
 }
 
@@ -468,8 +472,7 @@ input[type=checkbox] {
 
 .home-page header {
   background-image: url(../assets/header-image.jpg);
-  background-position: left bottom;
-  background-size: cover;
+  background-position: 20% center;
   min-height: 100vh;
   position: relative;
 }
@@ -490,14 +493,12 @@ input[type=checkbox] {
 .blog-page header {
   background-image: url(../assets/blog-header.jpg);
   background-position: center;
-  background-size: cover;
   min-height: 70vh;
 }
 
 .contact-page header {
   background-image: url(../assets/contact-image.jpg);
   background-position: left bottom;
-  background-size: cover;
   min-height: 70vh;
 }
 
@@ -543,33 +544,49 @@ input[type=checkbox] {
     display: none;
   }
   .blog-page header {
-    min-height: 40vh;
+    min-height: 30vh;
   }
   .contact-page header {
-    min-height: 40vh;
+    min-height: 30vh;
   }
 }
 
 /* MAJOR BREAKPOINT 2: portrait tablet & landscape phone */
 @media (max-width: 768px) {
-  i.fa-bars {
+  header .logo-and-nav-container .logo {
+    width: 100px;
+    font-size: 2.7rem;
+  }
+  header .logo-and-nav-container i.fa-bars {
     font-size: 4rem;
   }
-  .h1-main {
-    font-size: 10rem;
+  .home-page header {
+    min-height: 75vh;
+  }
+  .home-page header .h1-main {
+    font-size: 9rem;
+    margin-top: 60px;
+    min-width: 200px;
   }
 }
 
 /* MAJOR BREAKPOINT 3: landscape phone & down */
 @media (max-width: 480px) {
-  i.fa-bars {
+  header .logo-and-nav-container i.fa-bars {
     font-size: 3rem;
   }
   .header-menu a {
     font-size: 1.5rem;
   }
-  .h1-main {
-    font-size: 8rem;
+  .home-page header {
+    background-position: left center;
+    min-height: 60vh;
+  }
+  .home-page header .h1-main {
+    font-size: 7rem;
+    margin-top: 40px;
+    width: 200px;
+    text-shadow: 2px 2px #FAE5FF;
   }
 }
 
@@ -915,10 +932,16 @@ input[type=checkbox] {
     margin-top: 60px;
     padding: 0;
   }
+  .popular-section .text-container h2 {
+    font-size: 4.8rem;
+  }
 }
 
 /* MAJOR BREAKPOINT 2: portrait tablet & landscape phone */
 @media (max-width: 768px) {
+  .about-section h2 {
+    font-size: 4.5rem;
+  }
   .top-container .text-container h3,
   .bottom-container .text-container h3 {
     font-size: 3.8rem;
@@ -958,6 +981,16 @@ input[type=checkbox] {
   .icons-section .social-icons li a {
     margin-bottom: 20px;
   }
+  .icons-section .social-icons li h2 {
+    font-size: 4.5rem;
+  }
+  .popular-section .image-container img {
+    -webkit-box-shadow: 10px 10px #FE6F19;
+            box-shadow: 10px 10px #FE6F19;
+  }
+  .popular-section .text-container h2 {
+    font-size: 4.5rem;
+  }
   .gallery-section ul li {
     width: calc(50% - 15px);
   }
@@ -974,8 +1007,15 @@ input[type=checkbox] {
   .about-section {
     padding: 60px 0;
   }
+  .about-section h2 {
+    font-size: 4.2rem;
+  }
   .new-additions-section {
     padding: 60px 0;
+  }
+  .new-additions-section .top-container h3,
+  .new-additions-section .bottom-container h3 {
+    font-size: 3.5rem;
   }
   .icons-section {
     padding-top: 60px;
@@ -983,8 +1023,14 @@ input[type=checkbox] {
   .icons-section .social-icons li:last-child {
     padding: 0 0 25px 0;
   }
+  .icons-section .social-icons li h2 {
+    font-size: 4.2rem;
+  }
   .popular-section {
     padding: 60px 0;
+  }
+  .popular-section .text-container h2 {
+    font-size: 4.2rem;
   }
   .gallery-section {
     padding: 60px 0;
@@ -1253,11 +1299,11 @@ button:active {
   .main-section .h1-and-form-container form .name-and-email .name-box,
   .main-section .h1-and-form-container form .name-and-email .email-box {
     width: calc(100% - 40px);
-    margin: 0 20px 0 20px;
+    margin: 5px 20px 0 20px;
   }
   .main-section .h1-and-form-container form .message-box textarea {
     width: calc(100% - 40px);
-    margin: 20px;
+    margin: 30px 20px 20px 20px;
   }
   .main-section .h1-and-form-container form button {
     width: calc(100% - 40px);
@@ -1453,6 +1499,16 @@ aside ul a:active {
 }
 
 /* ------------------- MEDIA QUERIES ------------------- */
+/* MINOR BREAKPOINT 1: minor update to padding for responsiveness */
+@media (max-width: 1100px) {
+  article .text-container {
+    padding: 250px 10% 40px 40px;
+  }
+  article .text-container .h2-main {
+    font-size: 4.9rem;
+  }
+}
+
 /* MAJOR BREAKPOINT 1: small desktop & portrait tablet */
 @media (max-width: 940px) {
   .blog-page main .flex-container {
@@ -1477,11 +1533,11 @@ aside ul a:active {
     text-align: center;
   }
   article .image-container img {
-    max-width: 800px;
     -webkit-box-shadow: none;
             box-shadow: none;
     position: static;
     margin-top: 40px;
+    max-width: 900px;
   }
   article .text-container {
     padding: 40px;
@@ -1525,11 +1581,20 @@ aside ul a:active {
   .blog-page main .flex-container .comments-and-form .blog-form {
     margin-bottom: 60px;
   }
-  .comments img {
+  article .text-container {
+    padding: 20px;
+  }
+  article .text-container .h2-main {
+    font-size: 4rem;
+  }
+  .comments-and-form .h2-main {
+    font-size: 4rem;
+  }
+  .comments-and-form .comments img {
     width: calc(20% - 5px);
     margin: 2px 10px 0 0;
   }
-  .comments div {
+  .comments-and-form .comments div {
     width: calc(80% - 10px);
     margin-bottom: 50px;
   }

@@ -273,12 +273,20 @@
                 text-align: center;
                 margin-top: 60px;
                 padding: 0;
+                    h2 {
+                        font-size: 4.8rem;
+                    }
             }
     }
 }
 
 /* MAJOR BREAKPOINT 2: portrait tablet & landscape phone */
 @media (max-width: 768px) {
+    // about section
+    .about-section h2 {
+        font-size: 4.5rem;
+    }
+
     // new additions section
     .top-container,
     .bottom-container {
@@ -327,7 +335,20 @@
                     li a {
                         margin-bottom: 20px;
                     }
+                    li h2 {
+                        font-size: 4.5rem;
+                    }
             }
+    }
+
+    // popular section
+    .popular-section {
+        .image-container img {
+            box-shadow: 10px 10px $orange;
+        }
+        .text-container h2 {
+            font-size: 4.5rem;
+        }
     }
 
     // gallery section
@@ -349,11 +370,20 @@
     // about section
     .about-section {
         padding: 60px 0;
+            h2 {
+                font-size: 4.2rem;
+            }
     }
 
     // new additions section
     .new-additions-section {
         padding: 60px 0;
+            .top-container,
+            .bottom-container {
+                h3 {
+                    font-size: 3.5rem;
+                }
+            }
     }
 
     // icons section
@@ -362,11 +392,17 @@
             .social-icons li:last-child {
                 padding: 0 0 25px 0;
             }
+            .social-icons li h2 {
+                font-size: 4.2rem;
+            }
     }
 
     // popular this month section
     .popular-section {
         padding: 60px 0;
+            .text-container h2 {
+                font-size: 4.2rem;
+            }
     }
 
     // gallery section

@@ -1,7 +1,7 @@
 // GLOBAL STYLING - HEADER SECTION --------------------
 header {
-    background-attachment: fixed;
     background-repeat: no-repeat;
+    background-size: cover;
     padding-top: 30px;
         .logo-and-nav-container {
             display: flex;
@@ -53,8 +53,7 @@ input[type=checkbox] {
 // HOME PAGE - HEADER SECTION --------------------
 .home-page header {
     background-image: url(../assets/header-image.jpg);
-    background-position: left bottom;
-    background-size: cover;
+    background-position: 20% center;
     min-height: 100vh;
     position: relative;
         h1 {
@@ -74,7 +73,6 @@ input[type=checkbox] {
 .blog-page header {
     background-image: url(../assets/blog-header.jpg);
     background-position: center;
-    background-size: cover;
     min-height: 70vh;
 }
 
@@ -82,14 +80,13 @@ input[type=checkbox] {
 .contact-page header {
     background-image: url(../assets/contact-image.jpg);
     background-position: left bottom;
-    background-size: cover;
     min-height: 70vh;
 }
 
 /* ------------------- MEDIA QUERIES ------------------- */
 /* MAJOR BREAKPOINT 1: small desktop & portrait tablet */
 @media (max-width: 940px) {
-    // GLOBAL navigation (drop down menu)
+    // GLOBAL header (drop down menu)
     i.fa-bars {
         display: inherit;
     }
@@ -137,32 +134,45 @@ input[type=checkbox] {
 
     // BLOG PAGE header 
     .blog-page header {
-        min-height: 40vh;
+        min-height: 30vh;
     }
 
     // CONTACT PAGE header 
     .contact-page header {
-        min-height: 40vh;
+        min-height: 30vh;
     }
 }
 
 /* MAJOR BREAKPOINT 2: portrait tablet & landscape phone */
 @media (max-width: 768px) {
-    // GLOBAL navigation
-    i.fa-bars {
-        font-size: 4rem;
+    // GLOBAL header
+    header {
+        .logo-and-nav-container {
+            .logo {
+                width: 100px;
+                font-size: 2.7rem;
+                }
+            i.fa-bars {
+                font-size: 4rem;
+            }
+        }
     }
 
     // HOME PAGE header 
-    .h1-main {
-        font-size: 10rem;
+    .home-page header {
+        min-height: 75vh;
+            .h1-main {
+                font-size: 9rem;
+                margin-top: 60px;
+                min-width: 200px;
+            }
     }
 }
 
 /* MAJOR BREAKPOINT 3: landscape phone & down */
 @media (max-width: 480px) {
-    // GLOBAL navigation
-    i.fa-bars {
+    // GLOBAL header
+    header .logo-and-nav-container i.fa-bars {
         font-size: 3rem;
     }
 
@@ -171,7 +181,14 @@ input[type=checkbox] {
     }
 
     // HOME PAGE header 
-    .h1-main {
-        font-size: 8rem;
+    .home-page header {
+        background-position: left center;
+        min-height: 60vh;
+            .h1-main {
+                font-size: 7rem;
+                margin-top: 40px;
+                width: 200px;
+                text-shadow: 2px 2px $mauve;
+            }
     }
 }
