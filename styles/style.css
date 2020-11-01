@@ -508,7 +508,8 @@ input[type=checkbox] {
   i.fa-bars {
     display: inherit;
   }
-  i.fa-bars:focus, i.fa-bars:active {
+  i.fa-bars i.fa-bars:focus,
+  i.fa-bars i.fa-bars:active {
     color: #FE6F19;
   }
   .header-menu {
@@ -531,10 +532,10 @@ input[type=checkbox] {
     text-align: center;
     border-bottom: 1px solid #FFFFFF;
   }
-  .header-menu li:focus-within a,
-  .header-menu li:hover a,
-  .header-menu li:focus a,
-  .header-menu li:active a {
+  .header-menu li li:focus-within a,
+  .header-menu li li:hover a,
+  .header-menu li li:focus a,
+  .header-menu li li:active a {
     color: #FE6F19;
     border-bottom: none;
     background-color: transparent;

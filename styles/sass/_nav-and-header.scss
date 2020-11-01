@@ -89,8 +89,8 @@ input[type=checkbox] {
     // GLOBAL header (drop down menu)
     i.fa-bars {
         display: inherit;
-            &:focus,
-            &:active {
+            i.fa-bars:focus,
+            i.fa-bars:active {
                 color: $orange;
             }
     }
@@ -112,10 +112,10 @@ input[type=checkbox] {
                 padding: 20px 0;
                 text-align: center;
                 border-bottom: 1px solid $white;
-                    &:focus-within a,
-                    &:hover a,
-                    &:focus a,
-                    &:active a {
+                    li:focus-within a,
+                    li:hover a,
+                    li:focus a,
+                    li:active a {
                         color: $orange;
                         border-bottom: none;
                         background-color: transparent;
