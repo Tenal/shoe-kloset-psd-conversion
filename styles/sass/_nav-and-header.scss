@@ -89,10 +89,11 @@ input[type=checkbox] {
     // GLOBAL header (drop down menu)
     i.fa-bars {
         display: inherit;
-            i.fa-bars:focus,
-            i.fa-bars:active {
-                color: $orange;
-            }
+    }
+
+    i.fa-bars:focus,
+    i.fa-bars:active {
+        color: $orange;
     }
 
     .header-menu {

@@ -508,8 +508,8 @@ input[type=checkbox] {
   i.fa-bars {
     display: inherit;
   }
-  i.fa-bars i.fa-bars:focus,
-  i.fa-bars i.fa-bars:active {
+  i.fa-bars:focus,
+  i.fa-bars:active {
     color: #FE6F19;
   }
   .header-menu {
