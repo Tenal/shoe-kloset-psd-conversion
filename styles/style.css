@@ -1333,7 +1333,7 @@ button:hover, button:focus, button:active {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  max-width: 1280px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
@@ -1374,7 +1374,7 @@ article .image-container img {
 
 article .text-container {
   background-color: #FFFFFF;
-  padding: 320px 10% 40px 40px;
+  padding: 350px 10% 40px 40px;
   width: 100%;
 }
 
