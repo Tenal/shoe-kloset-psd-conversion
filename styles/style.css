@@ -1333,7 +1333,11 @@ button:hover, button:focus, button:active {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+<<<<<<< HEAD
   max-width: 1300px;
+=======
+  max-width: 1440px;
+>>>>>>> gh-pages
   margin: 0 auto;
 }
 
@@ -1348,7 +1352,6 @@ button:hover, button:focus, button:active {
   width: calc(37% - 25px - 10%);
   margin: 0 50px 0 5vw;
   background-color: #FFFFFF;
-  max-width: 500px;
 }
 
 article {
@@ -1369,12 +1372,16 @@ article .image-container img {
   -webkit-box-shadow: -30px 30px #FE6F19;
           box-shadow: -30px 30px #FE6F19;
   width: 100%;
-  max-width: 800px;
+  max-width: 900px;
 }
 
 article .text-container {
   background-color: #FFFFFF;
+<<<<<<< HEAD
   padding: 350px 10% 40px 40px;
+=======
+  padding: 400px 10% 40px 40px;
+>>>>>>> gh-pages
   width: 100%;
 }
 
@@ -1503,6 +1510,16 @@ aside ul a:active {
 
 /* ------------------- MEDIA QUERIES ------------------- */
 /* MINOR BREAKPOINT 1: minor update to padding for responsiveness */
+@media (max-width: 1280px) {
+  article .text-container {
+    padding: 330px 10% 40px 40px;
+  }
+  article .text-container .h2-main {
+    font-size: 4.9rem;
+  }
+}
+
+/* MINOR BREAKPOINT 2: minor update to padding for responsiveness */
 @media (max-width: 1100px) {
   article .text-container {
     padding: 250px 10% 40px 40px;
@@ -1528,7 +1545,7 @@ aside ul a:active {
     width: 90%;
   }
   .blog-page main .flex-container .flex-left {
-    width: 90%;
+    width: 70%;
     margin: 0;
   }
   article .image-container .h1-and-image {
@@ -1580,6 +1597,9 @@ aside ul a:active {
 @media (max-width: 480px) {
   .blog-page main .flex-container {
     padding: 10px 0 60px 0;
+  }
+  .blog-page main .flex-container .flex-left {
+    width: 90%;
   }
   .blog-page main .flex-container .comments-and-form .blog-form {
     margin-bottom: 60px;
