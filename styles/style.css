@@ -419,6 +419,9 @@ header .logo-and-nav-container {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  min-height: 72px;
+  position: relative;
+  z-index: 20;
 }
 
 header .logo-and-nav-container .logo {
@@ -448,22 +451,15 @@ header .logo-and-nav-container .logo {
   margin-right: 0;
 }
 
-button.dropdown-menu {
-  background-color: transparent;
+i.fa-bars,
+input[type=checkbox] {
   display: none;
-}
-
-button.dropdown-menu:hover, button.dropdown-menu:focus, button.dropdown-menu:active {
-  background-color: transparent;
-}
-
-button.dropdown-menu i.fa-bars {
   position: fixed;
   right: 30px;
   top: 20px;
   z-index: 10;
-  text-shadow: 0px 3px 5px #1f2022;
-  color: white;
+  text-shadow: 0px 3px 5px #FFFFFF;
+  color: #4C0341;
   font-size: 5rem;
   border-radius: 5px;
   padding: 0 3px;
@@ -507,39 +503,39 @@ button.dropdown-menu i.fa-bars {
 /* ------------------- MEDIA QUERIES ------------------- */
 /* MAJOR BREAKPOINT 1: small desktop & portrait tablet */
 @media (max-width: 940px) {
-  button.dropdown-menu {
+  i.fa-bars {
     display: inherit;
   }
   .header-menu {
+    position: fixed;
     display: block;
-    position: absolute;
     z-index: 10;
-    background-color: rgba(250, 229, 255, 0.9);
-    height: auto;
+    background-color: rgba(76, 3, 65, 0.9);
+    height: 100vh;
     width: 30vw;
-    top: 15vh;
-    right: -35vw;
+    top: 0;
+    left: -35vw;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
+    color: #FFFFFF;
   }
   .header-menu li {
     display: block;
     margin: 0;
     padding: 20px 0;
     text-align: center;
-    border-bottom: 1px solid #4C0341;
+    border-bottom: 1px solid #FFFFFF;
   }
-  .dropdown-menu:active + .header-menu,
-  .dropdown-menu:focus + .header-menu {
-    right: 0;
+  .header-menu li a {
+    text-shadow: none;
   }
-  .dropdown-menu:active + .header-menu .header-menu li:focus-within a,
-  .dropdown-menu:active + .header-menu .header-menu a:hover,
-  .dropdown-menu:active + .header-menu .header-menu a:active,
-  .dropdown-menu:focus + .header-menu .header-menu li:focus-within a,
-  .dropdown-menu:focus + .header-menu .header-menu a:hover,
-  .dropdown-menu:focus + .header-menu .header-menu a:active {
-    color: #4C0341;
+  input[type=checkbox]:checked + .header-menu {
+    left: 0;
+  }
+  .header-menu li:focus-within a,
+  .header-menu a:hover,
+  .header-menu a:active {
+    color: #FE6F19;
     border-bottom: none;
   }
   .home-page header img {
@@ -555,7 +551,7 @@ button.dropdown-menu i.fa-bars {
 
 /* MAJOR BREAKPOINT 2: portrait tablet & landscape phone */
 @media (max-width: 768px) {
-  button.dropdown-menu i.fa-bars {
+  i.fa-bars {
     font-size: 4rem;
   }
   .h1-main {
@@ -565,7 +561,7 @@ button.dropdown-menu i.fa-bars {
 
 /* MAJOR BREAKPOINT 3: landscape phone & down */
 @media (max-width: 480px) {
-  button.dropdown-menu i.fa-bars {
+  i.fa-bars {
     font-size: 3rem;
   }
   .header-menu a {

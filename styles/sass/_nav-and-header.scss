@@ -6,6 +6,9 @@ header {
         .logo-and-nav-container {
             display: flex;
             justify-content: space-between;
+            min-height: 72px;
+            position: relative;
+            z-index: 20;
                 .logo {
                     width: 100px;
                 }
@@ -31,27 +34,21 @@ header {
 }
 
 // mobile hamburger menu styling
-button.dropdown-menu {
-    background-color: transparent;
+i.fa-bars,
+input[type=checkbox] {
     display: none;
-        &:hover,
-        &:focus,
-        &:active {
-            background-color: transparent;
-        }
-        i.fa-bars {
-            position: fixed;
-            right: 30px;
-            top: 20px;
-            z-index: 10;
-            text-shadow: 0px 3px 5px #1f2022;
-            color: white;
-            font-size: 5rem;
-            border-radius: 5px;
-            padding: 0 3px;
-            cursor: pointer;
-        }
+    position: fixed;
+    right: 30px;
+    top: 20px;
+    z-index: 10;
+    text-shadow: 0px 3px 5px $white;
+    color: $plum;
+    font-size: 5rem;
+    border-radius: 5px;
+    padding: 0 3px;
+    cursor: pointer;
 }
+
 
 // HOME PAGE - HEADER SECTION --------------------
 .home-page header {
@@ -92,38 +89,42 @@ button.dropdown-menu {
 /* MAJOR BREAKPOINT 1: small desktop & portrait tablet */
 @media (max-width: 940px) {
     // GLOBAL navigation (drop down menu)
-    button.dropdown-menu {
+    i.fa-bars {
         display: inherit;
     }
 
     .header-menu {
+        position: fixed;
         display: block;
-        position: absolute;
         z-index: 10;
-        background-color: rgba(250, 229, 255, 0.9);
-        height: auto;
+        background-color: rgba(76, 3, 65, 0.9);
+        height: 100vh;
         width: 30vw;
-        top: 15vh;
-        right: -35vw;
+        top: 0;
+        left: -35vw;
         transition: all 0.5s ease;
+        color: $white;
             li {
                 display: block;
                 margin: 0;
                 padding: 20px 0;
                 text-align: center;
-                border-bottom: 1px solid $plum;
+                border-bottom: 1px solid $white;
+                    a {
+                        text-shadow: none;
+                    }
             }
     }
 
-    .dropdown-menu:active + .header-menu,
-    .dropdown-menu:focus + .header-menu {
-        right: 0;
-            .header-menu li:focus-within a,
-            .header-menu a:hover,
-            .header-menu a:active {
-                color: $plum;
-                border-bottom: none;
-            }
+    input[type=checkbox]:checked + .header-menu {
+        left: 0;
+    }
+
+    .header-menu li:focus-within a,
+    .header-menu a:hover,
+    .header-menu a:active {
+        color: $orange;
+        border-bottom: none;
     }
 
     // HOME PAGE header 
@@ -147,7 +148,7 @@ button.dropdown-menu {
 /* MAJOR BREAKPOINT 2: portrait tablet & landscape phone */
 @media (max-width: 768px) {
     // GLOBAL navigation
-    button.dropdown-menu i.fa-bars {
+    i.fa-bars {
         font-size: 4rem;
     }
 
@@ -160,7 +161,7 @@ button.dropdown-menu {
 /* MAJOR BREAKPOINT 3: landscape phone & down */
 @media (max-width: 480px) {
     // GLOBAL navigation
-    button.dropdown-menu i.fa-bars {
+    i.fa-bars {
         font-size: 3rem;
     }
 
