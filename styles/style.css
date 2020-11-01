@@ -271,6 +271,19 @@ img {
   margin: 0 auto;
 }
 
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: white;
+  color: black;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
 body,
 input {
   font-size: 2rem;
@@ -289,6 +302,24 @@ nav a {
   text-shadow: 1px 1px 2px #FFFFFF;
 }
 
+.logo {
+  font-size: 3.58rem;
+  font-weight: 400;
+  font-family: 'Pompiere', cursive;
+  text-transform: uppercase;
+  text-transform: initial;
+  line-height: 36px;
+  letter-spacing: 1.1px;
+}
+
+.address-container div p:first-child {
+  font-size: 3rem;
+  font-weight: 400;
+  font-family: 'Pompiere', cursive;
+  text-transform: uppercase;
+  color: #4C0341;
+}
+
 form button,
 .find-more,
 .read-more {
@@ -301,30 +332,12 @@ form button,
   color: #FFFFFF;
 }
 
-.address-container div p:first-child {
-  font-size: 3rem;
-  font-weight: 400;
-  font-family: 'Pompiere', cursive;
-  text-transform: uppercase;
-  color: #4C0341;
-}
-
 footer {
   font-size: 2rem;
   font-weight: 400;
   font-family: 'Lato', sans-serif;
   line-height: 3.2rem;
   color: #FFFFFF;
-}
-
-.logo {
-  font-size: 3.58rem;
-  font-weight: 400;
-  font-family: 'Pompiere', cursive;
-  text-transform: uppercase;
-  text-transform: initial;
-  line-height: 36px;
-  letter-spacing: 1.1px;
 }
 
 .h1-main {
@@ -360,7 +373,8 @@ h2 {
   color: #4C0341;
 }
 
-.h2-main {
+.about-us h2,
+.popular-this-month h2 {
   letter-spacing: 1.2px;
 }
 
@@ -486,7 +500,7 @@ button.dropdown-menu i.fa-bars {
 .blog-page header h1 {
   position: absolute;
   left: 44%;
-  top: 20%;
+  top: 25%;
   z-index: 10;
 }
 
@@ -510,7 +524,7 @@ button.dropdown-menu i.fa-bars {
 
 .contact-page header .header-contact .h1-contact {
   margin-left: 34%;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 /* ------------------- MEDIA QUERIES ------------------- */

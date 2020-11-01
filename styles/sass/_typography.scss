@@ -1,9 +1,4 @@
-
-// REVIEW: change the blue to H3???
-// NOTE: remove class on h2-main and just use indenting
-// NOTE: condense to a single mixin, maybe?
-
-
+// GLOBAL STYLING - typography --------------------
 
 // body, nav, button, and logo styling
 body,
@@ -21,6 +16,20 @@ nav {
     }
 }
 
+.logo {
+    @include heading-font(35.8);
+    text-transform: initial;
+    line-height: 36px;
+    letter-spacing: 1.1px;
+}
+
+.address-container {
+    div p:first-child {
+        @include heading-font(30);
+        color: $plum;
+    }
+}
+
 form button,
 .find-more,
 .read-more {
@@ -31,13 +40,6 @@ form button,
     color: $white;
 }
 
-.address-container {
-    div p:first-child {
-        @include heading-font(30);
-        color: $plum;
-    }
-}
-
 footer {
     @include body-font(20);
     line-height: 3.2rem;
@@ -45,13 +47,6 @@ footer {
 }
 
 // heading styling
-.logo {
-    @include heading-font(35.8);
-    text-transform: initial;
-    line-height: 36px;
-    letter-spacing: 1.1px;
-}
-
 .h1-main {
     @include heading-font(110);
     text-transform: initial;
@@ -76,31 +71,26 @@ h2 {
     color: $plum;
 }
 
-.h2-main {
+.about-us h2,
+.popular-this-month h2 {
     letter-spacing: 1.2px;
 }
 
-.icons-section {
-    h2 { 
+.icons-section h2 {
         @include heading-font(52);
         line-height: 5.2rem;
         letter-spacing: 1.6px;
         color: $black;
-    }
 }
 
-.new-additions-section {
-    h3 { 
+.new-additions-section h3 {
         @include heading-font(42);
         letter-spacing: 1.3px;
         color: $black;
-    }
 }
 
-.flex-left {
-    h3 { 
+.flex-left h3 {
         @include heading-font(30);
         letter-spacing: 1.3px;
         color: $plum;
-    }
 }

@@ -1,4 +1,6 @@
-// ABOUT US SECTION
+// HOME PAGE - MAIN SECTION --------------------
+
+// ABOUT US SECTION --------------------
 .about-section {
     background-color: $mauve;
     padding: 200px 0 180px 0;
@@ -23,7 +25,7 @@
     }
 }
 
-// NEW ADDITIONS SECTION
+// NEW ADDITIONS SECTION --------------------
 .top-container {
     display: flex;
     justify-content: space-between;
@@ -87,7 +89,7 @@
     }
 }
 
-// ICONS SECTION
+// ICONS SECTION --------------------
 .icons-section {
     background-color: $mauve;
     padding-top: 120px;
@@ -136,7 +138,7 @@
     }
 }
 
-// POPULAR THIS MONTH SECTION
+// POPULAR THIS MONTH SECTION --------------------
 .popular-section {
     display: flex;
     padding: 80px 0 80px 0;
@@ -173,7 +175,7 @@
         }
 }
 
-// GALLERY SECTION
+// GALLERY SECTION --------------------
 .gallery-section {
     background-color: $mauve;
     padding: 80px 0;
@@ -188,14 +190,10 @@
         }
 }
 
-
-
-
-
 /* ------------------- MEDIA QUERIES ------------------- */
 /* MAJOR BREAKPOINT 1: small desktop & portrait tablet */
 @media (max-width: 940px) {
-    // ABOUT SECTION
+    // about section
     .about-section {
         padding: 80px 0 80px 0;
             h2 {
@@ -203,7 +201,7 @@
             }
     }
 
-    // NEW ADDITIONS SECTION
+    // new additions section
     .new-additions-section {
         padding: 80px 0;
     }
@@ -248,7 +246,7 @@
         }
     }
 
-    // ICONS SECTION
+    // icons section
     .icons-section {
         padding-top: 80px;
             h2 {
@@ -256,7 +254,7 @@
             }
     }
 
-    // POPULAR THIS MONTH SECTION
+    // popular this month section
     .popular-section {
         flex-direction: column;
         justify-content: center;
@@ -277,16 +275,11 @@
                 padding: 0;
             }
     }
-
 }
-
-
-
-
 
 /* MAJOR BREAKPOINT 2: portrait tablet & landscape phone */
 @media (max-width: 768px) {
-    // NEW ADDITIONS SECTION
+    // new additions section
     .top-container,
     .bottom-container {
         .text-container {
@@ -321,7 +314,7 @@
         }
     }
 
-    // ICONS SECTION
+    //icons section
     .icons-section {
             .social-icons {
                 text-align: center;
@@ -337,7 +330,7 @@
             }
     }
 
-    // GALLERY SECTION
+    // gallery section
     .gallery-section {
         ul li {
             width: calc(50% - 15px);
@@ -351,23 +344,19 @@
     }
 }
 
-
-
-
-
 /* MAJOR BREAKPOINT 3: landscape phone & down */
 @media (max-width: 480px) {
-    // ABOUT SECTION
+    // about section
     .about-section {
         padding: 60px 0;
     }
 
-    // NEW ADDITIONS SECTION
+    // new additions section
     .new-additions-section {
         padding: 60px 0;
     }
 
-    // ICONS SECTION
+    // icons section
     .icons-section {
         padding-top: 60px;
             .social-icons li:last-child {
@@ -375,14 +364,13 @@
             }
     }
 
-    // POPULAR THIS MONTH SECTION
+    // popular this month section
     .popular-section {
         padding: 60px 0;
     }
 
-    // GALLERY SECTION
+    // gallery section
     .gallery-section {
         padding: 60px 0;
     }
-
 }
