@@ -489,8 +489,9 @@ input[type=checkbox] {
 
 .blog-page header {
   background-image: url(../assets/blog-header.jpg);
-  min-height: 70vh;
+  background-position: center;
   background-size: cover;
+  min-height: 70vh;
 }
 
 .contact-page header {
@@ -1026,30 +1027,6 @@ input[type=checkbox] {
   left: 30px;
 }
 
-.address-container .social-icons ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  color: #4C0341;
-}
-
-.address-container .social-icons ul li {
-  font-size: 2.3rem;
-  margin-right: 25px;
-}
-
-.address-container .social-icons ul li:last-child {
-  margin-right: 0;
-}
-
-.address-container .social-icons a {
-  padding: 5px 0;
-}
-
-.address-container .social-icons a:hover {
-  color: #FE6F19;
-}
-
 form.contact-form {
   margin: 0 auto;
   display: -webkit-box;
@@ -1164,6 +1141,30 @@ button:hover,
 button:focus,
 button:active {
   background-color: #FE6F19;
+}
+
+.address-container .social-icons ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #4C0341;
+}
+
+.address-container .social-icons ul li {
+  font-size: 2.3rem;
+  margin-right: 25px;
+}
+
+.address-container .social-icons ul li:last-child {
+  margin-right: 0;
+}
+
+.address-container .social-icons a {
+  padding: 5px 0;
+}
+
+.address-container .social-icons a:hover {
+  color: #FE6F19;
 }
 
 /* ------------------- MEDIA QUERIES ------------------- */

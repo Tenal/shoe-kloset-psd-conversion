@@ -1,6 +1,6 @@
 // CONTACT PAGE - MAIN SECTION --------------------
 
-// general layout & address container styling
+// GENERAL LAYOUT STYLING --------------------
 .main-contact {
     background-color: $mauve;
 }
@@ -25,34 +25,7 @@
         }
 }
 
-.address-container {
-    .social-icons {
-        ul {
-            display: flex;
-            color: $plum;
-                li {
-                    font-size: 2.3rem;
-                    margin-right: 25px;
-                }
-        }
-        ul li:last-child {
-            margin-right: 0;
-        }
-    }
-}
-
-.address-container {
-    .social-icons {
-        a {
-            padding: 5px 0;
-        }
-        a:hover {
-            color: $orange;
-        }
-    }
-}
-
-// form styling
+// FORM SECTION --------------------
 form.contact-form {
     margin: 0 auto;
     display: flex;
@@ -132,6 +105,34 @@ button:hover,
 button:focus,
 button:active {
     background-color: $orange;
+}
+
+// ADDRESS SECTION --------------------
+.address-container {
+    .social-icons {
+        ul {
+            display: flex;
+            color: $plum;
+                li {
+                    font-size: 2.3rem;
+                    margin-right: 25px;
+                }
+        }
+        ul li:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.address-container {
+    .social-icons {
+        a {
+            padding: 5px 0;
+        }
+        a:hover {
+            color: $orange;
+        }
+    }
 }
 
 /* ------------------- MEDIA QUERIES ------------------- */

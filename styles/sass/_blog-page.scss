@@ -1,6 +1,6 @@
 // BLOG PAGE - MAIN SECTION -------------------- 
 
-// general layout styling
+// GENERAL LAYOUT STYLING --------------------
 .blog-page main {
     background-color: $mauve;
         .flex-container {
@@ -24,7 +24,7 @@
         }
 }
 
-// article section
+// ARTICLE SECTION -------------------- 
 article {
     width: 100%;
     .image-container {
@@ -54,7 +54,7 @@ article {
     }
 }
 
-// blog comments section
+// BOG COMMENTS SECTION --------------------
 .comments-and-form {
     padding-right: 10%;  
     background-color: $mauve;  
@@ -84,7 +84,7 @@ article {
         }
 }
 
-// form section
+// FORM SECTION --------------------
 form.blog-form {
     .name-and-email {
         display: flex;
@@ -119,7 +119,7 @@ form.blog-form {
         }
     }
 
-// aside section
+// ASIDE SECTION --------------------
 aside {
     padding: 0 15px 30px 15px;
         img {

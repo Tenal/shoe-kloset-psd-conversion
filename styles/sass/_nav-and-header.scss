@@ -73,8 +73,9 @@ input[type=checkbox] {
 // BLOG PAGE - HEADER SECTION -------------------- 
 .blog-page header {
     background-image: url(../assets/blog-header.jpg);
-    min-height: 70vh;
+    background-position: center;
     background-size: cover;
+    min-height: 70vh;
 }
 
 // CONTACT PAGE - HEADER SECTION --------------------
