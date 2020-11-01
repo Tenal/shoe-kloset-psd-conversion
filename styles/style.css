@@ -1333,11 +1333,7 @@ button:hover, button:focus, button:active {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-<<<<<<< HEAD
-  max-width: 1300px;
-=======
   max-width: 1440px;
->>>>>>> gh-pages
   margin: 0 auto;
 }
 
@@ -1377,11 +1373,7 @@ article .image-container img {
 
 article .text-container {
   background-color: #FFFFFF;
-<<<<<<< HEAD
-  padding: 350px 10% 40px 40px;
-=======
   padding: 400px 10% 40px 40px;
->>>>>>> gh-pages
   width: 100%;
 }
 

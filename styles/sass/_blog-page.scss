@@ -9,11 +9,7 @@
             flex-direction: row-reverse;
             justify-content: center;
             align-items: flex-start;
-<<<<<<< HEAD
-            max-width: 1300px;
-=======
             max-width: 1440px;
->>>>>>> gh-pages
             margin: 0 auto;
                 .flex-right {
                     width: calc(63% - 25px);
@@ -45,11 +41,7 @@ article {
     }
     .text-container {
         background-color: $white;
-<<<<<<< HEAD
-        padding: 350px 10% 40px 40px;
-=======
         padding: 400px 10% 40px 40px;
->>>>>>> gh-pages
         width: 100%;
             p {
                 margin-top: 30px;
@@ -124,7 +116,7 @@ form.blog-form {
     button:active {
         background-color: $orange;
     }
-    }
+}
 
 // ASIDE SECTION --------------------
 aside {
