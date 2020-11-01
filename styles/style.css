@@ -1472,7 +1472,7 @@ aside {
 aside img {
   position: relative;
   top: -20px;
-  left: -100px;
+  left: -101px;
   width: 125%;
   max-width: 125%;
 }
@@ -1520,7 +1520,7 @@ aside ul a:active {
     font-size: 4.9rem;
   }
   aside img {
-    left: -80px;
+    left: -81px;
   }
 }
 
