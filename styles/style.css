@@ -248,6 +248,7 @@ button {
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 ul {
@@ -286,7 +287,7 @@ nav a {
   text-transform: uppercase;
   line-height: 29px;
   letter-spacing: 1px;
-  text-shadow: 1px 1px 2px #FFFFFF;
+  text-shadow: 2px 2px 1px #FFFFFF;
 }
 
 .logo {
@@ -444,11 +445,14 @@ header .logo-and-nav-container .logo {
 
 .header-menu li a {
   padding: 5px 12px;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .header-menu li a:hover {
   color: #FFFFFF;
   background-color: #4C0341;
+  text-shadow: 2px 2px 2px #0D0D0D;
 }
 
 .header-menu li:last-of-type {
@@ -534,6 +538,8 @@ input[type=checkbox] {
   }
   .header-menu li a {
     text-shadow: none;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
   }
   .header-menu li:focus-within a,
   .header-menu li:hover a,
@@ -625,6 +631,8 @@ input[type=checkbox] {
 .about-section .about-container .find-more {
   background-color: #4C0341;
   padding: 8px 18px;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .about-section .about-container .find-more:hover,
@@ -708,6 +716,8 @@ input[type=checkbox] {
 .bottom-container .text-container .read-more {
   padding: 8px 18px;
   background-color: #882C07;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .top-container .text-container .read-more:hover,
@@ -772,6 +782,8 @@ input[type=checkbox] {
   padding: 10px;
   margin: 0 20px;
   border-radius: 50%;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .icons-section a:hover i,
@@ -830,6 +842,8 @@ input[type=checkbox] {
 .popular-section .text-container .find-more {
   background-color: #882C07;
   padding: 8px 18px;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .popular-section .text-container .find-more:hover,
@@ -1187,6 +1201,8 @@ button {
   padding: 5px 0;
   margin: 0 60px;
   width: calc(100% - 120px);
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 button:hover,
@@ -1213,6 +1229,8 @@ button:active {
 
 .address-container .social-icons a {
   padding: 5px 0;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .address-container .social-icons a:hover {

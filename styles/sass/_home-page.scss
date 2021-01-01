@@ -16,6 +16,7 @@
             .find-more {
                 background-color: $plum;
                 padding: 8px 18px;
+                transition: all 0.3s linear;
             }
             .find-more:hover,
             .find-more:focus,
@@ -50,7 +51,6 @@
     justify-content: space-between;
     text-align: right;
         .image-container {
-            // margin-left: 40px;
                 img {
                     box-shadow: -30px 30px $orange;
                     position: relative;
@@ -76,6 +76,7 @@
             .read-more {
                 padding: 8px 18px;
                 background-color: $brown;
+                transition: all 0.3s linear;
             }
             .read-more:hover,
             .read-more:focus,
@@ -129,6 +130,7 @@
             padding: 10px;
             margin: 0 20px;
             border-radius: 50%;
+            transition: all 0.3s linear;
         }
     }
     a:hover i,
@@ -168,6 +170,7 @@
                 .find-more {
                     background-color: $brown;
                     padding: 8px 18px;
+                    transition: all 0.3s linear;
                 }
                 .find-more:hover,
                 .find-more:focus,
